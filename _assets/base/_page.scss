@@ -133,6 +133,23 @@ h6 {
   }
 }
 
+body > section + section {
+  border-top: 3px solid transparent;
+  border-image-source: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 10%,
+    rgba($gold, 0.35) 22%,
+    rgba($gold, 0.9) 38%,
+    $gold 50%,
+    rgba($gold, 0.9) 62%,
+    rgba($gold, 0.35) 78%,
+    transparent 90%,
+    transparent 100%
+  );
+  border-image-slice: 1;
+}
+
 @media(min-width:768px) {
   section {
     padding: $section-padding-y-desktop 0;
