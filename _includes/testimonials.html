@@ -7,14 +7,14 @@
           <h3 class="textblock-subheading text-muted">{{ site.data.sitetext.testimonials.text | default: "" }}</h3>
         </div>
       </div>
-      <div class="row" style="max-width: 1100px; margin: 0 auto;">
+      <div class="row">
       {% for person in site.data.sitetext.testimonials.people %}
         <div class="col-lg-4">
-          <div class="team-member" style="border: 1px solid rgba(212,175,55,0.2); padding: $space-4; background: $charcoal; transition: all 300ms ease;">
-            <blockquote style="border-left: 2px solid $gold; padding-left: 20px; margin: 20px 0; font-style: italic; color: $champagne; font-family: 'Josefin Sans', sans-serif;">
-              <p class="text-muted font-italic" style="color: $pewter;">{{ person.testimony }}</p>
+          <div class="team-member">
+            <blockquote>
+              <p>{{ person.testimony }}</p>
             </blockquote>
-            <h5 style="color: $gold; font-family: 'Marcellus', serif; text-transform: uppercase; letter-spacing: 0.08em;">{{ person.name }}</h5>
+            <h5>{{ person.name }}</h5>
           </div>
         </div>
       {% endfor %}

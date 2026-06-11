@@ -4,8 +4,8 @@
 @import "bootstrap/scss/mixins";
 @import "base/variables.scss";
 
-$primary: $obsidian;
-$secondary: $midnight;
+$primary: $navy;
+$secondary: $blue;
 $accent: $gold;
 $white: rgb(255, 255, 255);
 $black: #000;
@@ -13,9 +13,9 @@ $input-height:calc(#{$input-height-inner} + #{$input-height-border});
 
 $spacer:1rem;
 $border-width:1px;
-$border-radius:0px;
-$enable-rounded: false;
-$enable-shadows:false;
+$border-radius:4px;
+$enable-rounded: true;
+$enable-shadows:true;
 $enable-gradients:false;
 
 $header-image: "./img/hero.jpg";
@@ -37,6 +37,7 @@ $header-image: "./img/hero.jpg";
 @import "components/animations.scss";
 
 @import "layout/masthead.scss";
+@import "layout/hero.scss";
 @import "layout/services.scss";
 @import "layout/portfolio.scss";
 @import "layout/team.scss";

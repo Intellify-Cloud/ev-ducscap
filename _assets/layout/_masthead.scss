@@ -1,55 +1,28 @@
-// Styling for the masthead — Art Deco Hero with Sunburst
+// Styling for the masthead/hero — Duces Capital Navy & White
 header.masthead {
   text-align: center;
-  color: $champagne;
-  background-color: $obsidian;
+  color: $white;
+  background-color: $navy;
   background-image: url("#{$header-image}");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+
   &::before {
-    background: rgba($obsidian, 0.65);
+    background: rgba($navy, 0.75);
     content: "";
     inset: 0;
     position: absolute;
     pointer-events: none;
     z-index: 0;
   }
-  min-height: 85vh;
+
+  min-height: 80vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-
-  &::before {
-    background: radial-gradient(
-      ellipse at center,
-      rgba(212, 175, 55, 0.06) 0%,
-      rgba(212, 175, 55, 0.02) 35%,
-      transparent 70%
-    );
-    content: "";
-    inset: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  &::after {
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 80px,
-      rgba(212, 175, 55, 0.03) 80px,
-      rgba(212, 175, 55, 0.03) 81px
-    );
-    content: "";
-    inset: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-  }
 
   .container {
     width: 100%;
@@ -69,9 +42,9 @@ header.masthead {
       font-weight: 400;
       line-height: $line-height-heading;
       margin-bottom: $space-3;
-      font-family: 'Josefin Sans', sans-serif;
-      color: $pewter;
-      letter-spacing: 0.15em;
+      font-family: $font-body;
+      color: rgba($white, 0.7);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -80,12 +53,21 @@ header.masthead {
       font-weight: 700;
       line-height: $line-height-tight;
       margin-bottom: $space-4;
-      font-family: 'Marcellus', serif;
-      color: $champagne;
+      font-family: $font-display;
+      color: $white;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      text-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+      letter-spacing: 0.02em;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
+  }
+
+  // Hero CTA buttons
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    justify-content: center;
+    margin-top: $space-4;
   }
 }
 
@@ -148,9 +130,3 @@ header.masthead {
     }
   }
 }
-
-// p {
-//   margin-top: 90px;
-//   margin-bottom: 1rem;
-//   line-height: 1.75;
-// }

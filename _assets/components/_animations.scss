@@ -80,13 +80,13 @@
 // Glow pulse effect
 @keyframes glowPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 0 0 rgba($gold, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+    box-shadow: 0 0 0 10px rgba($gold, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    box-shadow: 0 0 0 0 rgba($gold, 0);
   }
 }
 
@@ -153,16 +153,16 @@
 // Gold border glow
 @keyframes borderGlow {
   0% {
-    border-color: rgba(212, 175, 55, 0.2);
-    box-shadow: 0 0 5px rgba(212, 175, 55, 0);
+    border-color: rgba($gold, 0.2);
+    box-shadow: 0 0 5px rgba($gold, 0);
   }
   50% {
-    border-color: rgba(212, 175, 55, 0.6);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    border-color: rgba($gold, 0.6);
+    box-shadow: 0 0 15px rgba($gold, 0.3);
   }
   100% {
-    border-color: rgba(212, 175, 55, 0.2);
-    box-shadow: 0 0 5px rgba(212, 175, 55, 0);
+    border-color: rgba($gold, 0.2);
+    box-shadow: 0 0 5px rgba($gold, 0);
   }
 }
 
@@ -206,9 +206,9 @@
 .animate-shimmer {
   background: linear-gradient(
     90deg,
-    rgba(212, 175, 55, 0.1),
-    rgba(212, 175, 55, 0.3),
-    rgba(212, 175, 55, 0.1)
+    rgba($gold, 0.1),
+    rgba($gold, 0.3),
+    rgba($gold, 0.1)
   );
   background-size: 1000px 100%;
   animation: shimmer 2s infinite;
@@ -323,13 +323,13 @@
   // Success state animation
   &.is-valid {
     .form-control {
-      border-color: #51cf66;
-      box-shadow: 0 0 0 3px rgba(81, 207, 102, 0.1);
+      border-color: $success;
+      box-shadow: 0 0 0 3px $success-bg;
       animation: borderGlow 0.3s ease-out;
     }
 
     .form-feedback {
-      color: #51cf66;
+      color: $success;
       font-size: 0.875rem;
       margin-top: $space-1;
       animation: slideUpIn $motion-standard ease-out;
@@ -341,7 +341,7 @@
       right: $space-2;
       top: 50%;
       transform: translateY(-50%);
-      color: #51cf66;
+      color: $success;
       font-size: 1.2rem;
       animation: slideRightIn $motion-standard ease-out;
     }
@@ -350,13 +350,13 @@
   // Error state animation
   &.is-invalid {
     .form-control {
-      border-color: #ff6b6b;
-      box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+      border-color: $error;
+      box-shadow: 0 0 0 3px $error-bg;
       animation: borderGlow 0.3s ease-out;
     }
 
     .form-feedback {
-      color: #ff6b6b;
+      color: $error;
       font-size: 0.875rem;
       margin-top: $space-1;
       animation: slideUpIn $motion-standard ease-out;
@@ -368,7 +368,7 @@
       right: $space-2;
       top: 50%;
       transform: translateY(-50%);
-      color: #ff6b6b;
+      color: $error;
       font-size: 1.2rem;
       animation: slideRightIn $motion-standard ease-out;
     }
@@ -393,7 +393,7 @@
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba($white, 0.3);
     transform: translate(-50%, -50%);
     transition: width $motion-fast ease-out, height $motion-fast ease-out;
   }
@@ -405,7 +405,7 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: $elevation-2, 0 0 20px rgba(212, 175, 55, 0.2);
+    box-shadow: $elevation-2, 0 0 20px rgba($gold, 0.2);
   }
 
   &:active {
@@ -422,9 +422,9 @@
 .skeleton {
   background: linear-gradient(
     90deg,
-    rgba(212, 175, 55, 0.05) 0%,
-    rgba(212, 175, 55, 0.1) 50%,
-    rgba(212, 175, 55, 0.05) 100%
+    rgba($gold, 0.05) 0%,
+    rgba($gold, 0.1) 50%,
+    rgba($gold, 0.05) 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
@@ -465,7 +465,7 @@
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: 3px solid rgba(212, 175, 55, 0.2);
+  border: 3px solid rgba($gold, 0.2);
   border-top-color: $gold;
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -483,12 +483,12 @@
   }
 
   &.loader-gold {
-    border-color: rgba(212, 175, 55, 0.1);
+    border-color: rgba($gold, 0.1);
     border-top-color: $gold;
   }
 
   &.loader-double {
-    border-right-color: rgba(212, 175, 55, 0.4);
+    border-right-color: rgba($gold, 0.4);
   }
 }
 

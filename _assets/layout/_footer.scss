@@ -1,37 +1,18 @@
-// Styling for the footer — Art Deco conclusion panel
+// Styling for the footer — Duces Capital Navy footer
 .footer {
-  background-color: $obsidian;
-  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  background-color: $navy;
+  border-top: 1px solid rgba($white, 0.1);
   padding: $space-5 0 30px;
   position: relative;
   text-align: center;
-
-  &::before {
-    background: linear-gradient(
-      90deg,
-      rgba(212, 175, 55, 0),
-      rgba(212, 175, 55, 0.15) 22%,
-      rgba(212, 175, 55, 0.5) 50%,
-      rgba(212, 175, 55, 0.15) 78%,
-      rgba(212, 175, 55, 0)
-    );
-    content: "";
-    height: 1px;
-    left: 50%;
-    max-width: 760px;
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-    width: calc(100% - #{$space-4});
-  }
 
   .copyright {
     font-size: 0.8rem;
     line-height: 40px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: $pewter;
-    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.05em;
+    color: rgba($white, 0.6);
+    font-family: $font-body;
   }
 
   ul.quicklinks {
@@ -39,12 +20,12 @@
     line-height: 40px;
     margin-bottom: 0;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: $pewter;
-    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.05em;
+    color: rgba($white, 0.6);
+    font-family: $font-body;
 
     a {
-      color: $pewter;
+      color: rgba($white, 0.6);
       transition: color $motion-fast;
 
       &:hover {
@@ -54,7 +35,7 @@
   }
 
   a {
-    color: $pewter;
+    color: rgba($white, 0.6);
 
     &:hover {
       color: $gold;
@@ -63,7 +44,7 @@
 
   small {
     a {
-      color: rgba(212, 175, 55, 0.6);
+      color: rgba($gold, 0.6);
       text-decoration: none;
       transition: color $motion-fast;
 
@@ -81,13 +62,13 @@
 }
 
 .whatsapp h5 {
-  color: $obsidian;
+  color: $navy;
   background: $gold;
   padding: 8px;
-  border-radius: 0px;
-  letter-spacing: 0.1em;
+  border-radius: $radius-md;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-family: 'Marcellus', serif;
+  font-family: $font-display;
 }
 
 ul.social-buttons {
@@ -97,8 +78,8 @@ ul.social-buttons {
     a {
       align-items: center;
       background-color: transparent;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      border-radius: 0px;
+      border: 1px solid rgba($gold, 0.4);
+      border-radius: $radius-md;
       color: $gold;
       display: inline-flex;
       font-size: 18px;
@@ -112,9 +93,9 @@ ul.social-buttons {
       &:active,
       &:focus-visible,
       &:hover {
-        background-color: rgba(212, 175, 55, 0.12);
+        background-color: rgba($gold, 0.12);
         border-color: $gold;
-        box-shadow: $elevation-1, 0 0 15px rgba(212, 175, 55, 0.2);
+        box-shadow: 0 0 15px rgba($gold, 0.2);
         color: $gold-light;
         transform: translateY(-1px);
       }

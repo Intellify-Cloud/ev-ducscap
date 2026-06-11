@@ -1,10 +1,9 @@
-// Styling for the portfolio section — Art Deco case studies gallery
+// Styling for the portfolio section — Duces Capital Professional Theme
 #portfolio {
-  background-color: $obsidian;
+  background-color: $white;
 
   .section-heading {
-    @extend .h2;
-    color: $champagne;
+    color: $navy;
     margin-bottom: $space-2;
   }
 
@@ -35,7 +34,6 @@
         top: 0;
         left: 0;
         background: rgba($gold, 0.15);
-        backdrop-filter: blur(2px);
         transition: all $motion-theatrical;
         opacity: 0;
         display: flex;
@@ -57,13 +55,12 @@
             color: $gold;
           }
 
-          h3,
-          h4 {
+          h3, h4 {
             margin: 0;
-            color: $champagne;
-            font-family: 'Marcellus', serif;
+            color: $white;
+            font-family: $font-display;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.02em;
           }
 
           h3 {
@@ -73,7 +70,7 @@
 
           h4 {
             font-size: 0.9rem;
-            color: $pewter;
+            color: rgba($white, 0.7);
           }
         }
       }
@@ -100,16 +97,16 @@
       margin: 0 auto;
       padding: $space-4;
       text-align: center;
-      background-color: $charcoal;
-      border: 1px solid rgba($gold, 0.2);
+      background-color: $white;
+      border: 1px solid rgba($navy, 0.12);
       border-top: none;
       transition: all $motion-standard;
 
       h4 {
         margin: 0 0 $space-1;
         text-transform: none;
-        color: $champagne;
-        font-family: 'Marcellus', serif;
+        color: $navy;
+        font-family: $font-display;
         font-size: 1.1rem;
         font-weight: 600;
       }
@@ -118,13 +115,13 @@
         font-size: 0.95rem;
         font-style: italic;
         margin: 0;
-        color: $pewter;
-        font-family: 'Josefin Sans', sans-serif;
+        color: $medium-grey;
+        font-family: $font-body;
       }
 
       &:hover {
-        background-color: rgba($gold, 0.04);
-        border-color: rgba($gold, 0.4);
+        background-color: rgba($navy, 0.02);
+        border-color: rgba($navy, 0.25);
       }
     }
   }
@@ -149,28 +146,27 @@
   }
 
   .modal-content {
-    background-color: $charcoal;
-    border: 1px solid rgba($gold, 0.2);
+    background-color: $white;
+    border: 1px solid rgba($navy, 0.12);
     padding: $space-5 $space-4;
     text-align: center;
 
     h2 {
-      @extend .h1;
-      color: $champagne;
-      font-family: 'Marcellus', serif;
+      color: $navy;
+      font-family: $font-display;
       margin-bottom: $space-3;
     }
 
     p {
       margin-bottom: $space-3;
-      color: $pewter;
+      color: $medium-grey;
     }
 
     p.item-intro {
       font-size: 1rem;
       font-style: italic;
       margin: $space-3 0;
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: $font-body;
       color: $gold;
     }
 
@@ -199,7 +195,7 @@
       margin-bottom: $space-4;
       max-width: 100%;
       height: auto;
-      border: 1px solid rgba($gold, 0.2);
+      border: 1px solid rgba($navy, 0.12);
     }
   }
 }

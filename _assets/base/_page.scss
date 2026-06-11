@@ -1,41 +1,26 @@
-// Global styling for this template
+// Global styling — Duces Capital Professional Theme
 body {
   overflow-x: hidden;
   @include body-font;
-  background-color: $obsidian;
+  background-color: $body-bg;
   color: $text-strong;
   line-height: $line-height-body;
-
-  &::before {
-    background: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 20px,
-      rgba(212, 175, 55, 0.015) 20px,
-      rgba(212, 175, 55, 0.015) 21px
-    );
-    content: "";
-    inset: 0;
-    position: fixed;
-    pointer-events: none;
-    z-index: 0;
-  }
 }
 
 p {
   line-height: $line-height-body;
   margin-bottom: $space-3;
-  color: $champagne;
+  color: $text-strong;
 }
 
 a {
-  color: $gold;
-  transition: color $motion-fast, text-shadow $motion-fast;
+  color: $blue;
+  transition: color $motion-fast;
   text-decoration: none;
 
   &:hover {
-    color: $gold-light;
-    text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+    color: $blue-light;
+    text-decoration: underline;
   }
 
   &:focus-visible {
@@ -72,7 +57,7 @@ textarea:focus:not(:focus-visible),
 }
 
 .text-primary {
-  color: $gold !important;
+  color: $navy !important;
 }
 
 .bg-surface-muted {
@@ -88,13 +73,13 @@ h6 {
   font-weight: 700;
   line-height: $line-height-heading;
   @include heading-font;
-  color: $champagne;
+  color: $navy;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
 }
 
 .page-section {
-  padding: $section-padding-y-mobile $space-3;
+  padding: $section-padding-y-mobile 0;
   position: relative;
   z-index: 1;
 
@@ -110,14 +95,13 @@ h6 {
     text-align: center;
     position: relative;
 
-    &::before,
     &::after {
       content: "";
       display: block;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, $gold, transparent);
-      margin: $space-2 auto;
-      width: 120px;
+      height: 2px;
+      background: $gold;
+      margin: $space-2 auto 0;
+      width: 60px;
     }
   }
 
@@ -130,9 +114,9 @@ h6 {
     max-width: $content-measure;
     text-transform: none;
     text-align: center;
-    color: $pewter;
-    font-family: 'Josefin Sans', sans-serif;
-    letter-spacing: 0.02em;
+    color: $medium-grey;
+    font-family: $font-body;
+    letter-spacing: 0.01em;
   }
 
   h3.textblock-subheading {
@@ -144,8 +128,8 @@ h6 {
     max-width: $content-measure;
     text-transform: none;
     text-align: center;
-    color: $pewter;
-    font-family: 'Josefin Sans', sans-serif;
+    color: $medium-grey;
+    font-family: $font-body;
   }
 }
 
@@ -155,7 +139,7 @@ h6 {
   }
 
   .page-section {
-    padding: $section-padding-y-desktop $space-5;
+    padding: $section-padding-y-desktop 0;
   }
 }
 
@@ -174,17 +158,17 @@ h6 {
   }
 }
 
-// Highlight color — gold glow for text selection
+// Selection highlight
 ::-moz-selection {
-  background: rgba(212, 175, 55, 0.35);
+  background: rgba($gold, 0.3);
   text-shadow: none;
-  color: $champagne;
+  color: $navy;
 }
 
 ::selection {
-  background: rgba(212, 175, 55, 0.35);
+  background: rgba($gold, 0.3);
   text-shadow: none;
-  color: $champagne;
+  color: $navy;
 }
 
 img::selection {
@@ -198,55 +182,21 @@ img::-moz-selection {
 // Gold divider utility
 .gold-divider {
   display: block;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, $gold, transparent);
+  height: 2px;
+  background: $gold;
   margin: $space-3 auto;
-  width: 160px;
+  width: 60px;
   border: none;
-}
-
-// Corner embellishments
-.corner-bracket {
-  position: relative;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-color: $gold;
-    border-style: solid;
-    opacity: 0.7;
-    transition: opacity $motion-standard;
-  }
-
-  &::before {
-    top: 8px;
-    left: 8px;
-    border-width: 1px 0 0 1px;
-  }
-
-  &::after {
-    bottom: 8px;
-    right: 8px;
-    border-width: 0 1px 1px 0;
-  }
-
-  &:hover::before,
-  &:hover::after {
-    opacity: 1;
-  }
 }
 
 // ================ CALCULATOR PAGES
 .calculator-page {
-  background: $charcoal;
+  background: $soft-white;
   min-height: 80vh;
 }
 
 .calculator-page iframe {
-  background: $charcoal;
+  background: $soft-white;
   display: block;
 }
 

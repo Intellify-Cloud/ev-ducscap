@@ -1,0 +1,267 @@
+// Hero Section — Duces Capital
+// White background, navy/gold accents, geometric Art Deco feel. No pills/chips.
+
+.hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: $navy;
+  background-image: url("/assets/img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  color: $white;
+
+  &::before {
+    background: rgba($navy, 0.72);
+    content: "";
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+// Subtle grid pattern
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba($navy, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($navy, 0.035) 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+// Animated top accent line
+.hero-accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  z-index: 2;
+}
+
+.hero-accent-line--top {
+  background: linear-gradient(90deg, $gold, transparent);
+  animation: heroLineIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.2s;
+  width: 0;
+}
+
+.hero-accent-line--bottom {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  background: linear-gradient(270deg, $gold, transparent);
+  animation: heroLineIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.4s;
+  width: 0;
+}
+
+@keyframes heroLineIn {
+  from { width: 0; }
+  to   { width: 45%; }
+}
+
+// Rotating diamond
+.hero-accent-diamond {
+  position: absolute;
+  top: 18%;
+  right: 8%;
+  width: 340px;
+  height: 340px;
+  border: 2px solid rgba($gold, 0.5);
+  z-index: 0;
+  animation: heroDiamond 22s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes heroDiamond {
+  0%   { transform: rotate(45deg) scale(1); }
+  50%  { transform: rotate(125deg) scale(1.06); }
+  100% { transform: rotate(405deg) scale(1); }
+}
+
+// Pulsing dot
+.hero-accent-dot {
+  position: absolute;
+  bottom: 28%;
+  right: 14%;
+  width: 64px;
+  height: 64px;
+  background: $gold;
+  opacity: 0.18;
+  z-index: 0;
+  border-radius: 0;
+  animation: heroDotPulse 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes heroDotPulse {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.18; }
+  50%      { transform: translateY(-24px) scale(1.15); opacity: 0.28; }
+}
+
+// Content container
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  padding: $space-5 $space-3;
+}
+
+// Logo
+.hero-logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: $space-6;
+  text-decoration: none;
+  opacity: 0;
+  animation: heroFadeIn 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+
+  img {
+    height: 90px;
+    max-width: 100%;
+    filter: drop-shadow(0 2px 8px rgba($navy, 0.18));
+  }
+}
+
+.hero-logo-text {
+  @include font-display;
+  font-size: 1.6rem;
+  color: $white;
+  letter-spacing: 0.08em;
+}
+
+.hero-body {
+  max-width: 860px;
+}
+
+.hero-title {
+  @include font-display;
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  line-height: $line-height-tight;
+  color: $white;
+  margin-bottom: $space-3;
+  opacity: 0;
+  animation: heroFadeIn 0.7s ease-out forwards;
+  animation-delay: 0.25s;
+
+  .hero-title-accent {
+    color: $gold;
+  }
+}
+
+.hero-subtitle {
+  @include font-display-sm;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  color: rgba($white, 0.8);
+  margin-bottom: $space-3;
+  opacity: 0;
+  animation: heroFadeIn 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.hero-description {
+  @include font-body;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: rgba($white, 0.75);
+  line-height: $line-height-body;
+  max-width: 680px;
+  margin-bottom: $space-5;
+  opacity: 0;
+  animation: heroFadeIn 0.6s ease-out forwards;
+  animation-delay: 0.55s;
+}
+
+// CTA buttons
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  margin-bottom: $space-6;
+  opacity: 0;
+  animation: heroFadeIn 0.6s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+// Stats grid
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-4 $space-6;
+  max-width: 720px;
+  opacity: 0;
+  animation: heroFadeIn 0.6s ease-out forwards;
+  animation-delay: 0.85s;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hero-stat {
+  position: relative;
+  padding-top: $space-2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background: $gold;
+  }
+}
+
+.hero-stat-value {
+  @include font-display;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  color: $white;
+  line-height: 1;
+  margin-bottom: $space-1;
+}
+
+.hero-stat-label {
+  @include font-body;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba($white, 0.65);
+}
+
+// Entrance animation
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// Responsive tweaks
+@media (max-width: 639px) {
+  .hero-accent-diamond {
+    width: 180px;
+    height: 180px;
+    top: 10%;
+    right: -40px;
+  }
+
+  .hero-accent-dot {
+    width: 40px;
+    height: 40px;
+    bottom: 18%;
+    right: 8%;
+  }
+
+  .hero-logo img {
+    height: 64px;
+  }
+}

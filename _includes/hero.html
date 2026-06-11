@@ -1,0 +1,62 @@
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+  <!-- Subtle grid background -->
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+
+  <!-- Top accent line — animated width -->
+  <div class="hero-accent-line hero-accent-line--top" aria-hidden="true"></div>
+
+  <!-- Rotating diamond -->
+  <div class="hero-accent-diamond" aria-hidden="true"></div>
+
+  <!-- Pulsing dot -->
+  <div class="hero-accent-dot" aria-hidden="true"></div>
+
+  <!-- Bottom accent line — animated width -->
+  <div class="hero-accent-line hero-accent-line--bottom" aria-hidden="true"></div>
+
+  <!-- Content -->
+  <div class="hero-content container">
+    <!-- Logo -->
+    <a class="hero-logo" href="{{ site.baseurl }}/#">
+      {%- if site.logo -%}
+        <img src="{{ site.logo.path | relative_url }}" alt="{{ site.title | default: site.company }}" width="auto" height="90"/>
+      {%- else -%}
+        <span class="hero-logo-text">{{ site.company | default: site.title }}</span>
+      {%- endif -%}
+    </a>
+
+    <div class="hero-body">
+      <h1 class="hero-title">
+        {{ site.data.sitetext.header.title | default: "Property Finance Made Clear." }}
+      </h1>
+      <p class="hero-subtitle">
+        {{ site.data.sitetext.header.text | default: "Helping homebuyers and property investors secure the right finance solution with confidence." }}
+      </p>
+      <p class="hero-description">
+        Apply once, at no cost to you. Let South Africa's leading banks compete for your business.
+      </p>
+      <div class="hero-actions">
+        <a href="{{ site.data.sitetext.header.button1_url | default: '#contact' }}" class="btn btn-primary btn-xl">
+          {{ site.data.sitetext.header.button1 | default: "Apply Now" }}
+        </a>
+        <a href="{{ site.data.sitetext.header.button2_url | default: '#contact' }}" class="btn btn-outline-primary btn-xl">
+          {{ site.data.sitetext.header.button2 | default: "Talk To An Advisor" }}
+        </a>
+      </div>
+
+      <!-- Stats -->
+      {% if site.data.sitetext.header.stats %}
+      <div class="hero-stats">
+        {% for stat in site.data.sitetext.header.stats %}
+        <div class="hero-stat">
+          <div class="hero-stat-value">{{ stat.value }}</div>
+          <div class="hero-stat-label">{{ stat.label }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<!-- End Hero -->

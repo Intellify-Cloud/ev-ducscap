@@ -1,16 +1,18 @@
-// Button styling — Art Deco Precision Instruments
+// Button styling — Duces Capital Brand System
+// Based on design.md: Navy primary, blue secondary/hover, gold premium CTA
+
 .btn {
   @include heading-font;
-  font-weight: 400;
-  font-size: 0.8rem;
+  font-weight: 600;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
   cursor: pointer;
   border: 2px solid transparent;
-  border-radius: 0px;
-  padding: 14px 28px;
-  margin: 8px;
-  min-height: 52px;
+  border-radius: $radius-md;
+  padding: 12px 28px;
+  margin: 4px;
+  min-height: 48px;
   transition: background-color $motion-standard, border-color $motion-standard,
     box-shadow $motion-standard, color $motion-standard, transform $motion-fast;
   position: relative;
@@ -21,20 +23,63 @@
   }
 
   &:active {
-    transform: scale(0.98);
+    transform: translateY(1px);
   }
 }
 
 .btn-xl {
   font-size: 0.9rem;
-  padding: 18px 40px;
-  letter-spacing: 0.2em;
+  padding: 16px 40px;
+  letter-spacing: 0.08em;
 }
 
-// Primary — Gold background, obsidian text
+// Primary — Navy background, white text → hover to blue
 .btn-primary {
+  background-color: $navy;
+  color: $white;
+  border: 2px solid $navy;
+  box-shadow: $elevation-1;
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+    border-color: $blue;
+    color: $white;
+    box-shadow: $elevation-2;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+    background-color: $navy-dark;
+    color: $white;
+  }
+}
+
+// Secondary — Navy border, navy text → hover filled navy
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid $navy;
+  color: $navy;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $navy;
+    border-color: $navy;
+    color: $white;
+    box-shadow: $elevation-1;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+// Premium CTA — Gold background, navy text (used selectively)
+.btn-premium {
   background-color: $gold;
-  color: $obsidian;
+  color: $navy;
   border: 2px solid $gold;
   box-shadow: $elevation-1;
 
@@ -42,69 +87,28 @@
   &:focus {
     background-color: $gold-light;
     border-color: $gold-light;
-    color: $obsidian;
-    box-shadow: $elevation-2, 0 0 30px rgba(212, 175, 55, 0.3);
+    color: $navy;
+    box-shadow: $elevation-2;
     transform: translateY(-1px);
   }
 
   &:active {
     transform: translateY(0) scale(0.98);
-    background-color: darken($gold, 8%);
-    color: $obsidian;
-  }
-}
-
-// Outline — Transparent, gold border
-.btn-outline-primary {
-  background-color: transparent;
-  border: 2px solid $gold;
-  color: $gold;
-
-  &:hover {
-    background-color: rgba(212, 175, 55, 0.08);
-    border-color: $gold;
-    color: $gold-light;
-    box-shadow: $elevation-2, 0 0 20px rgba(212, 175, 55, 0.2);
-  }
-
-  &:active {
-    transform: translateY(0) scale(0.98);
-  }
-}
-
-// Accent — Midnight blue, champagne text
-.btn-accent {
-  background-color: $midnight;
-  color: $champagne;
-  border: 2px solid $midnight;
-  box-shadow: $elevation-1;
-
-  &:hover,
-  &:focus {
-    background-color: lighten($midnight, 8%);
-    border-color: $gold;
-    color: $champagne;
-    box-shadow: $elevation-2, 0 0 20px rgba(30, 61, 89, 0.4);
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0) scale(0.98);
-    background-color: darken($midnight, 5%);
-    color: $champagne;
+    background-color: $gold-dark;
+    color: $navy;
   }
 }
 
 // Ghost — minimal, for secondary actions
 .btn-ghost {
   background-color: transparent;
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  color: $gold;
+  border: 1px solid rgba($navy, 0.3);
+  color: $navy;
 
   &:hover {
-    background-color: rgba(212, 175, 55, 0.06);
-    border-color: $gold;
-    color: $champagne;
+    background-color: rgba($navy, 0.05);
+    border-color: $navy;
+    color: $navy;
     box-shadow: $elevation-1;
   }
 

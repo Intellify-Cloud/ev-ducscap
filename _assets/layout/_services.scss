@@ -1,24 +1,24 @@
-// Styling for the services section
+// Styling for the services section — Duces Capital Professional Theme
 .service-heading {
   margin: $space-3 0 $space-2;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: $line-height-heading;
-  font-family: 'Marcellus', serif;
+  font-family: $font-display;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: $champagne;
+  letter-spacing: 0.02em;
+  color: $gold;
 }
 
 .services-section {
-  background-color: $surface-muted;
+  background-color: $soft-white;
   position: relative;
 
   &::before {
     background: linear-gradient(
       180deg,
       transparent 0%,
-      rgba(212, 175, 55, 0.03) 50%,
+      rgba($navy, 0.02) 50%,
       transparent 100%
     );
     content: "";
@@ -33,13 +33,13 @@
 }
 
 #services .card {
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba($navy, 0.12);
   box-shadow: $elevation-1;
-  border-radius: 0px;
+  border-radius: $radius-md;
   overflow: hidden;
   transition: all $motion-theatrical;
-  color: $champagne;
-  background: $charcoal;
+  color: $text-strong;
+  background: $white;
   position: relative;
 
   &::after {
@@ -49,15 +49,15 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+    background: $gold;
     transform: scaleX(0);
     transition: transform $motion-theatrical;
   }
 
   &:hover {
-    box-shadow: $elevation-3, 0 0 30px rgba(212, 175, 55, 0.15);
+    box-shadow: $elevation-2;
     transform: translateY(-4px);
-    border-color: rgba(212, 175, 55, 0.5);
+    border-color: rgba($navy, 0.25);
 
     &::after {
       transform: scaleX(1);
@@ -65,8 +65,8 @@
   }
 
   &:focus-within {
-    box-shadow: $elevation-3, 0 0 20px rgba(212, 175, 55, 0.2);
-    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: $elevation-2;
+    border-color: rgba($navy, 0.25);
   }
 }
 
@@ -80,16 +80,16 @@
 
 #services .card .card-footer {
   border: none;
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
-  background: rgba(212, 175, 55, 0.03);
+  border-top: 1px solid rgba($navy, 0.08);
+  background: rgba($navy, 0.02);
   padding: 0 $space-3 $space-3;
 }
 
 #services .btn {
   margin-bottom: 0;
-  font-weight: 500;
-  border-radius: 0px;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  border-radius: $radius-md;
+  letter-spacing: 0.05em;
 
   &:hover {
     transform: translateY(-1px);

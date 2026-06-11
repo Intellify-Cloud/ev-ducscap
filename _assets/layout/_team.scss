@@ -1,4 +1,4 @@
-// Styling for the team section
+// Styling for the team section — Duces Capital Professional Theme
 .team-inner {
   align-items: stretch;
   display: flex;
@@ -25,7 +25,7 @@
 
   &:hover,
   &:focus-within {
-    box-shadow: $elevation-3;
+    box-shadow: $elevation-2;
     transform: translateY(-2px);
   }
 }
@@ -64,7 +64,7 @@
 
 .team-hours-list {
   p {
-    color: $pewter;
+    color: $medium-grey;
     font-size: 0.95rem;
     line-height: $line-height-body;
     margin: 0 0 $space-1;
@@ -77,7 +77,7 @@
 
 .team-hours-note {
   align-items: flex-start;
-  border-top: 1px solid rgba($gold, 0.2);
+  border-top: 1px solid rgba($navy, 0.1);
   display: flex;
   gap: $space-1;
   margin-top: $space-4;
@@ -91,7 +91,7 @@
   }
 
   span {
-    color: $pewter;
+    color: $medium-grey;
     font-size: 0.875rem;
     font-style: italic;
     line-height: $line-height-body;
@@ -133,10 +133,10 @@
 
 .team-featured-role,
 .team-card-role {
-  color: $primary;
+  color: $blue;
   font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   line-height: $line-height-heading;
   margin: $space-1 0 $space-3;
   text-transform: uppercase;
@@ -144,7 +144,7 @@
 
 .team-featured-bio,
 .team-card-bio {
-  color: $gray-600;
+  color: $medium-grey;
   line-height: $line-height-body;
 }
 
@@ -162,9 +162,9 @@
 
   a {
     align-items: center;
-    background: $brand-primary-soft;
+    background: rgba($navy, 0.06);
     border-radius: $radius-sm;
-    color: $primary;
+    color: $navy;
     display: inline-flex;
     font-size: 1.1rem;
     height: 46px;
@@ -174,7 +174,7 @@
 
     &:hover,
     &:focus-visible {
-      background: $primary;
+      background: $navy;
       box-shadow: $elevation-1;
       color: $white;
       outline: 0;
@@ -201,7 +201,7 @@
 
 .team-card-image {
   aspect-ratio: 1;
-  background: $gray-100;
+  background: $light-grey;
   position: relative;
 
   img {
@@ -228,11 +228,6 @@
 .team-card-bio {
   font-size: 0.9rem;
   margin: 0 0 $space-3;
-}
-
-.highlight {
-  background-color: #fff2ac;
-  background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
 }
 
 @media (max-width: 780px) {

@@ -1,35 +1,58 @@
-// Font Mixins — Art Deco Typography System
-// Headings: Marcellus (serif display) or Italiana
-// Body: Josefin Sans (geometric sans-serif, vintage feel)
+// ============================================
+// DESIGN TOKENS — Single Source of Truth
+// ============================================
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Marcellus&display=swap');
+// ============================================
+// TYPOGRAPHY MIXINS
+// ============================================
 
-@mixin serif-font {
-  font-family: 'Marcellus', 'Italiana', 'Times New Roman', serif;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-}
-
-@mixin script-font {
-  font-family: 'Marcellus', 'Italiana', 'Times New Roman', serif;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-}
-
-@mixin body-font {
-  font-family: 'Josefin Sans', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+@mixin font-display {
+  font-family: $font-display;
+  font-weight: 600;
   letter-spacing: 0.02em;
-}
-
-@mixin heading-font {
-  font-family: 'Marcellus', 'Italiana', 'Times New Roman', serif;
-  font-weight: 400;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-// Art Deco Decorative Mixins
+@mixin font-body {
+  font-family: $font-body;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@mixin font-display-sm {
+  font-family: $font-display;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin font-body-italic {
+  font-family: $font-body;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-style: italic;
+}
+
+// ============================================
+// EXISTING MIXINS (font-only replaced with token refs)
+// ============================================
+
+@mixin serif-font {
+  @include font-display;
+}
+
+@mixin script-font {
+  @include font-display;
+}
+
+@mixin body-font {
+  @include font-body;
+}
+
+@mixin heading-font {
+  @include font-display;
+}
+
 // Stepped corners using clip-path (ziggurat style)
 @mixin stepped-corners($size: 12px) {
   clip-path: polygon(
@@ -98,7 +121,7 @@
   }
 }
 
-// Rotated diamond container (45-degree rotation)
+// Rotated diamond container
 @mixin rotated-diamond($size: 80px, $color: $gold) {
   width: $size;
   height: $size;
@@ -114,12 +137,11 @@
   }
 }
 
-// Glow effect (Art Deco neon/backlit effect)
+// Glow effect
 @mixin glow-effect($color: $gold, $intensity: 0.2) {
   box-shadow: 0 0 15px rgba($color, $intensity), 0 0 30px rgba($color, $intensity * 0.5);
 }
 
-// Enhanced glow on hover
 @mixin glow-hover($color: $gold) {
   &:hover {
     @include glow-effect($color, 0.4);

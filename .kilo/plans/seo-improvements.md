@@ -19,7 +19,7 @@ Create `robots.txt` in root with:
 ```
 User-agent: *
 Allow: /
-Sitemap: https://evohomeloans.co.za/sitemap.xml
+Sitemap: https://ducescapital.co.za/sitemap.xml
 ```
 
 #### Add sitemap.xml
@@ -38,18 +38,18 @@ Add to `_includes/head.html` inside `<head>`:
 {
   "@context": "https://schema.org",
   "@type": "FinancialService",
-  "name": "Mortgage4U",
+  "name": "Duces Capital",
   "description": "{{ site.description }}",
   "url": "{{ site.url }}",
-  "logo": "{{ "/assets/mortage4u-logo.png" | absolute_url }}",
+  "logo": "{{ "/assets/img/logo/logo.png" | absolute_url }}",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "South Africa"
   },
-  "telephone": "+27845476711",
-  "email": "esme@mo4u.co.za",
+  "telephone": "+27123456789",
+  "email": "kunle@ducescapital.co.za",
   "areaServed": "ZA",
-  "serviceType": ["Bond Origination", "Mortgage Broker", "Home Loan Application"]
+  "serviceType": ["Bond Origination", "Property Finance", "Home Loan Finance", "Investment Property Finance"]
 }
 </script>
 ```
@@ -170,7 +170,7 @@ For SEO in South Africa, add geo-specific schema:
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "ZA",
-    "addressRegion": "Western Cape"
+    "addressRegion": "South Africa"
   },
   "geo": {
     "@type": "GeoCoordinates",

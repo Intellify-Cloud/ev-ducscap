@@ -1,17 +1,12 @@
-// Styling for the contact section — Art Deco chamber
+// Styling for the contact section — Duces Capital Professional Theme
 #contact {
-  background-color: $obsidian;
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  background-color: $white;
+  border-top: 1px solid rgba($navy, 0.1);
   position: relative;
 
   .section-heading {
-    @extend .h2;
-    color: $champagne;
+    color: $navy;
     margin-bottom: $space-2;
-  }
-
-  .section-subheading {
-    @extend .section-subheading;
   }
 }
 
@@ -34,16 +29,16 @@
     line-height: $line-height-body;
     margin: 0 auto $space-4;
     max-width: $content-measure;
-    color: $pewter;
-    font-family: 'Josefin Sans', sans-serif;
+    color: $medium-grey;
+    font-family: $font-body;
   }
 }
 
 .contact-details-card,
 .contact-form-card {
-  background: $charcoal;
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 0px;
+  background: $white;
+  border: 1px solid rgba($navy, 0.12);
+  border-radius: $radius-md;
   box-shadow: $elevation-1;
   transition: all $motion-theatrical;
   position: relative;
@@ -54,16 +49,16 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+    height: 2px;
+    background: $gold;
     transform: scaleX(0);
     transition: transform $motion-theatrical;
   }
 
   &:hover,
   &:focus-within {
-    box-shadow: $elevation-3, 0 0 25px rgba(212, 175, 55, 0.12);
-    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: $elevation-2;
+    border-color: rgba($navy, 0.25);
 
     &::after {
       transform: scaleX(1);
@@ -82,9 +77,9 @@
   flex: 1;
   min-width: 0;
   padding: $space-4;
-  background: $charcoal;
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 0px;
+  background: $white;
+  border: 1px solid rgba($navy, 0.12);
+  border-radius: $radius-md;
   box-shadow: $elevation-1;
   position: relative;
 
@@ -94,8 +89,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+    height: 2px;
+    background: $gold;
   }
 }
 
@@ -110,7 +105,7 @@
   gap: $space-2;
   margin-bottom: $space-4;
   padding-bottom: $space-3;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba($navy, 0.1);
 }
 
 .contact-details-icon {
@@ -119,14 +114,14 @@
 }
 
 .contact-details-title {
-  color: $champagne;
+  color: $navy;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: $line-height-heading;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-family: 'Marcellus', serif;
+  letter-spacing: 0.02em;
+  font-family: $font-display;
 }
 
 .contact-methods {
@@ -135,20 +130,20 @@
 }
 
 .contact-details-note {
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
-  color: $pewter;
+  border-top: 1px solid rgba($navy, 0.1);
+  color: $medium-grey;
   font-size: 0.9rem;
   font-style: italic;
   line-height: $line-height-body;
   margin: $space-4 0 0;
   padding-top: $space-3;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: $font-body;
 }
 
 .contact-method {
   align-items: center;
-  border-radius: 0px;
-  color: $champagne;
+  border-radius: $radius-md;
+  color: $text-strong;
   display: flex;
   gap: $space-2;
   padding: $space-3;
@@ -158,42 +153,41 @@
 
   &:hover,
   &:focus-visible {
-    background: rgba(212, 175, 55, 0.05);
-    border-color: rgba(212, 175, 55, 0.3);
-    box-shadow: $elevation-1, inset 0 0 20px rgba(212, 175, 55, 0.03);
-    color: $champagne;
+    background: rgba($navy, 0.03);
+    border-color: rgba($navy, 0.15);
+    box-shadow: $elevation-1;
+    color: $text-strong;
     outline: 0;
     text-decoration: none;
     transform: translateX(2px);
   }
 
-  strong,
-  span span {
+  strong, span span {
     display: block;
   }
 
   strong {
-    color: $champagne;
+    color: $navy;
     font-size: 0.85rem;
     line-height: $line-height-heading;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-family: 'Marcellus', serif;
+    letter-spacing: 0.02em;
+    font-family: $font-display;
   }
 
   span span {
-    color: $pewter;
+    color: $medium-grey;
     font-size: 0.9rem;
     line-height: $line-height-body;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: $font-body;
   }
 }
 
 .contact-method-icon {
   align-items: center;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  border-radius: 0px;
+  background: rgba($gold, 0.08);
+  border: 1px solid rgba($gold, 0.3);
+  border-radius: $radius-md;
   color: $gold;
   display: inline-flex;
   flex: 0 0 46px;
@@ -204,14 +198,14 @@
   transition: all $motion-fast;
 
   .contact-method:hover & {
-    background: rgba(212, 175, 55, 0.15);
+    background: rgba($gold, 0.15);
     border-color: $gold;
   }
 }
 
 .contact-us p {
   margin-bottom: 0.25em;
-  color: $champagne;
+  color: $text-strong;
 }
 
 @media (max-width: 780px) {

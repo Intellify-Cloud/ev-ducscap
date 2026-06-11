@@ -1,6 +1,19 @@
 header:
   title: "Property Finance Made Clear."
   text: "Helping homebuyers and property investors secure the right finance solution with confidence."
+  button1: "Apply Now"
+  button1_url: "#contact"
+  button2: "Talk To An Advisor"
+  button2_url: "#contact"
+  stats:
+    - value: "1000+"
+      label: "Successful Approvals"
+    - value: "7"
+      label: "Leading Banks"
+    - value: "15+"
+      label: "Years Experience"
+    - value: "100%"
+      label: "Client Satisfaction"
 
 expert:
   title: "Apply once, at no cost to you. Let South Africa's leading banks compete for your business."
@@ -13,33 +26,21 @@ services:
   text: "Access competitive finance solutions through expert guidance and South Africa's leading lenders."
   section: services
   list:
-    - title: "Home Loans"
-      desc: "Secure the best home loan for your new home purchase with personalised guidance through the entire application process."
+    - title: "Home Loans & Bond Origination"
+      desc: "We apply to up to seven banks and negotiate the best rate and terms for your new home purchase."
       icon: fas fa-home
       link:
         url: "#contact"
         text: "Enquire Now"
-    - title: "Bond Origination"
-      desc: "We submit applications to up to seven major and niche banks, negotiating the best interest rates and terms for your bond."
-      icon: fas fa-file-signature
-      link:
-        url: "#contact"
-        text: "Enquire Now"
     - title: "Refinancing"
-      desc: "Explore better rates and terms on your existing home loan. We handle the negotiation and paperwork on your behalf."
+      desc: "Better rates on your existing home loan — we handle the negotiation and paperwork."
       icon: fas fa-exchange-alt
       link:
         url: "#contact"
         text: "Enquire Now"
-    - title: "Investment Property Finance"
-      desc: "Specialised finance solutions for property investors seeking to grow their portfolio with competitive lending terms."
+    - title: "Property Investment & Commercial Finance"
+      desc: "Competitive lending solutions for investors and businesses acquiring, developing, or growing their property portfolio."
       icon: fas fa-chart-line
-      link:
-        url: "#contact"
-        text: "Enquire Now"
-    - title: "Commercial Property Finance"
-      desc: "Tailored commercial property finance for businesses seeking to acquire, develop, or improve commercial real estate."
-      icon: fas fa-building
       link:
         url: "#contact"
         text: "Enquire Now"
@@ -165,7 +166,7 @@ team:
         - url: tel:+27123456789
           icon: fas fa-phone
           title: Phone
-        - url: mailto:john@ducescapital.co.za?subject=Duces Capital Enquiry
+        - url: mailto:kunle@ducescapital.co.za?subject=Duces Capital Enquiry
           icon: fas fa-envelope
           title: Email
         - url: https://api.whatsapp.com/send?phone=27123456789
@@ -202,8 +203,8 @@ contact:
       url: tel:+27123456789
       icon: fas fa-phone
     - title: "Email"
-      text: "john@ducescapital.co.za"
-      url: mailto:john@ducescapital.co.za?subject=Duces Capital Enquiry
+      text: "kunle@ducescapital.co.za"
+      url: mailto:kunle@ducescapital.co.za?subject=Duces Capital Enquiry
       icon: fas fa-envelope
     - title: "WhatsApp"
       text: "Chat on WhatsApp"
@@ -211,7 +212,7 @@ contact:
       icon: fab fa-whatsapp
   faq:
     - question: "How do I contact Duces Capital?"
-      answer: "You can reach us by phone at 012 345 6789, email at john@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
+      answer: "You can reach us by phone at 012 345 6789, email at kunle@ducescapital.co.za, or WhatsApp. We're available Monday to Friday 08:00–17:00 and Saturdays by appointment."
     - question: "Do I pay for bond origination services?"
       answer: "No, our services are completely free to you as the client. We are paid by the banks once your finance is approved."
 
