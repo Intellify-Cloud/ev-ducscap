@@ -1,31 +1,69 @@
-// Styling for the services section
+// Styling for the textblock section — Art Deco striking entrance
 .textblock-heading {
-    margin: $space-1 0;
-    text-transform: none;
-    color: $primary;
-    line-height: $line-height-heading;
+  margin: $space-1 0;
+  text-transform: uppercase;
+  color: $gold;
+  line-height: $line-height-heading;
+  letter-spacing: 0.1em;
 }
 
 .textblock-image {
   min-width: 50px;
+  color: $gold;
 }
 
 .textblock-section {
-  background-color: $white;
+  background-color: $obsidian;
   padding: $space-4 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  position: relative;
+
+  &::before {
+    background: radial-gradient(
+      ellipse at center top,
+      rgba(212, 175, 55, 0.05) 0%,
+      transparent 60%
+    );
+    content: "";
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+  }
 
   > .container {
-    max-width: 800px;
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+  }
+  .textblock-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .textblock-title {
+    line-height: $line-height-body;
+    padding: $space-1;
+    color: $champagne;
+    font-size: 1.1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: none;
   }
 }
 
-.textblock-title {
-  line-height: $line-height-body;
-  padding: $space-1;
+.textblock-section .row .text-left strong {
+  color: $gold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  font-family: 'Marcellus', serif;
 }
 
 img {
-  max-width: 100%; // Ensure images are responsive
+  max-width: 100%;
   height: auto;
-  border-radius: 4px; // Slight rounding for images
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }

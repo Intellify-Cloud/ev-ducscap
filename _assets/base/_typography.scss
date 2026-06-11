@@ -1,0 +1,678 @@
+// Typography System — Art Deco Theatrical Hierarchy
+// Fluid responsive scales using clamp() for dramatic, readable typography
+
+// ============================================
+// HEADING SCALES — Fluid & Responsive
+// ============================================
+
+// H1 — Page Dominating Title
+h1,
+.h1 {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(2rem, 7vw, 4rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $champagne;
+  line-height: $line-height-tight;
+  margin: $space-5 0 $space-2;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  small,
+  .small {
+    font-size: 0.6em;
+    color: $gold;
+    display: block;
+    margin-top: $space-2;
+  }
+}
+
+// H2 — Major Section Title
+h2,
+.h2 {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $champagne;
+  line-height: $line-height-tight;
+  margin: $space-5 0 $space-2;
+}
+
+// H3 — Subsection Title
+h3,
+.h3 {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $gold;
+  line-height: $line-height-tight;
+  margin: $space-4 0 $space-2;
+}
+
+// H4 — Card & Box Title
+h4,
+.h4 {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $gold;
+  line-height: $line-height-heading;
+  margin: $space-3 0 $space-1;
+}
+
+// H5 — Label & Accent
+h5,
+.h5 {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $champagne;
+  line-height: $line-height-heading;
+  margin: $space-2 0;
+}
+
+// H6 — Small Title & Widget Header
+h6,
+.h6 {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $pewter;
+  line-height: $line-height-heading;
+  margin: $space-1 0;
+}
+
+// ============================================
+// DISPLAY TYPOGRAPHY — Maximum Impact
+// ============================================
+
+// Display XL (hero/banner)
+.display-xl {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(3rem, 12vw, 6rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: $line-height-tight;
+  color: $champagne;
+}
+
+.display-xl-gold {
+  @extend .display-xl;
+  color: $gold;
+}
+
+// Display LG (large feature)
+.display-lg {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(2.25rem, 8vw, 4rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: $line-height-tight;
+  color: $champagne;
+}
+
+// Display MD (emphasis text)
+.display-md {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: $line-height-tight;
+  color: $champagne;
+}
+
+// Display SM (accent/highlight)
+.display-sm {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: $line-height-heading;
+  color: $gold;
+}
+
+// ============================================
+// BODY TYPOGRAPHY
+// ============================================
+
+// Lead paragraph (emphasis, often larger)
+.lead {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: $champagne;
+  line-height: $line-height-body;
+  margin-bottom: $space-3;
+}
+
+// Standard paragraph
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: $champagne;
+  line-height: $line-height-body;
+  margin-bottom: $space-3;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.text-muted {
+    color: $pewter;
+  }
+
+  &.text-gold {
+    color: $gold;
+  }
+
+  &.text-highlight {
+    color: $gold;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+}
+
+// Small text
+small,
+.small {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: $pewter;
+  line-height: $line-height-body;
+}
+
+// Mark/highlight
+mark,
+.mark {
+  background-color: rgba($gold, 0.1);
+  color: $gold;
+  padding: 2px 6px;
+  border-left: 2px solid $gold;
+  font-weight: 400;
+}
+
+// Code/monospace
+code,
+kbd,
+pre {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  background-color: rgba($obsidian, 0.5);
+  border: 1px solid rgba($gold, 0.2);
+  border-radius: 0px;
+  padding: 2px 6px;
+  color: $gold;
+}
+
+pre {
+  padding: $space-3;
+  overflow-x: auto;
+  margin-bottom: $space-3;
+
+  code {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+}
+
+// Blockquote
+blockquote {
+  position: relative;
+  padding: $space-3 $space-4 $space-3 $space-5;
+  margin: $space-4 0;
+  border-left: 3px solid $gold;
+  background: rgba($gold, 0.02);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: $champagne;
+  line-height: $line-height-body;
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    left: $space-2;
+    top: $space-1;
+    font-family: 'Marcellus', serif;
+    font-size: 2rem;
+    color: rgba($gold, 0.3);
+  }
+
+  p {
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cite,
+  cite {
+    display: block;
+    margin-top: $space-2;
+    font-size: 0.9rem;
+    color: $pewter;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &::before {
+      content: "\2014 ";
+      color: $gold;
+    }
+  }
+}
+
+// ============================================
+// TEXT DECORATIONS & EFFECTS
+// ============================================
+
+// Underline variants
+a {
+  text-decoration: none;
+  position: relative;
+  transition: color $motion-fast;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform $motion-fast;
+  }
+
+  &:hover {
+    color: $gold-light;
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+// Dramatic underline (strong emphasis)
+.text-underline-dramatic {
+  position: relative;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $gold, transparent);
+  }
+}
+
+// Overline (above text)
+.text-overline {
+  position: relative;
+  padding-top: $space-2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba($gold, 0.5), transparent);
+  }
+}
+
+// Strike-through (for disabled/inactive)
+.text-strikethrough {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+// Text with shadow (theatrical depth)
+.text-shadow-gold {
+  text-shadow: 0 2px 8px rgba($gold, 0.2);
+}
+
+.text-shadow-dark {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+// Letter spacing variants
+.tracking-tighter {
+  letter-spacing: -0.02em;
+}
+
+.tracking-tight {
+  letter-spacing: -0.01em;
+}
+
+.tracking-normal {
+  letter-spacing: 0em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.1em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.2em;
+}
+
+// Line height variants
+.leading-tight {
+  line-height: $line-height-tight;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: $line-height-body;
+}
+
+.leading-loose {
+  line-height: 1.875;
+}
+
+// ============================================
+// TEXT COLOR UTILITIES
+// ============================================
+
+.text-champagne {
+  color: $champagne;
+}
+
+.text-gold {
+  color: $gold;
+}
+
+.text-gold-light {
+  color: $gold-light;
+}
+
+.text-pewter {
+  color: $pewter;
+}
+
+.text-midnight {
+  color: $midnight;
+}
+
+.text-muted {
+  color: $text-muted;
+}
+
+.text-error {
+  color: #ff6b6b;
+}
+
+.text-success {
+  color: #51cf66;
+}
+
+// ============================================
+// TEXT ALIGNMENT & STYLING
+// ============================================
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+// Text transform
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-oblique {
+  font-style: oblique;
+}
+
+.text-normal {
+  font-style: normal;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-semibold {
+  font-weight: 500;
+}
+
+.text-normal-weight {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+// Text wrapping
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+// ============================================
+// TYPOGRAPHY COMBINATIONS (Common Patterns)
+// ============================================
+
+// Hero text block
+.text-hero {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $champagne;
+  line-height: $line-height-tight;
+}
+
+// Feature/highlight text
+.text-feature {
+  font-family: 'Marcellus', serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $gold;
+  font-weight: 400;
+}
+
+// Subtitle/secondary text
+.text-subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: $pewter;
+}
+
+// Caption/label text
+.text-caption {
+  font-family: 'Marcellus', serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $gold;
+  font-weight: 400;
+}
+
+// ============================================
+// RESPONSIVE TEXT SIZING
+// ============================================
+
+@media (max-width: 768px) {
+  h1,
+  .h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  h2,
+  .h2 {
+    font-size: clamp(1.35rem, 4vw, 2rem);
+  }
+
+  h3,
+  .h3 {
+    font-size: clamp(1.15rem, 3vw, 1.75rem);
+  }
+
+  .display-xl {
+    font-size: clamp(2rem, 10vw, 4rem);
+  }
+
+  .display-lg {
+    font-size: clamp(1.5rem, 6vw, 2.75rem);
+  }
+
+  .text-hero {
+    font-size: clamp(1.75rem, 8vw, 3rem);
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+// ============================================
+// LIST STYLING
+// ============================================
+
+ul,
+ol {
+  margin-bottom: $space-3;
+  padding-left: $space-4;
+}
+
+li {
+  color: $champagne;
+  line-height: $line-height-body;
+  margin-bottom: $space-1;
+}
+
+// Unstyled list
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+// Ordered list with Roman numerals
+.list-roman {
+  list-style: upper-roman;
+}
+
+// Inline list
+.list-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  list-style: none;
+  padding-left: 0;
+
+  .list-inline-item {
+    display: inline;
+
+    &::after {
+      content: "·";
+      margin-left: $space-2;
+      color: $gold;
+    }
+
+    &:last-child::after {
+      content: "";
+      margin-left: 0;
+    }
+  }
+}
+
+// ============================================
+// DEFINITION LIST
+// ============================================
+
+dt {
+  font-family: 'Marcellus', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $gold;
+  margin-top: $space-3;
+}
+
+dd {
+  color: $pewter;
+  margin-left: $space-4;
+  margin-bottom: $space-2;
+}

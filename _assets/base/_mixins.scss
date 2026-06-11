@@ -1,25 +1,127 @@
-// Primary Font: Montserrat (Headings, Navigation, Hero, Graphics)
-// Weights: SemiBold (600), Bold (700)
+// Font Mixins — Art Deco Typography System
+// Headings: Marcellus (serif display) or Italiana
+// Body: Josefin Sans (geometric sans-serif, vintage feel)
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Marcellus&display=swap');
+
 @mixin serif-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-}
-
-// Used in navbar-brand (logo)
-@mixin script-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-// Secondary Font: Inter (Paragraphs, Forms, Buttons, Long content)
-// Weights: Regular (400), Medium (500)
-@mixin body-font {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Marcellus', 'Italiana', 'Times New Roman', serif;
   font-weight: 400;
+  letter-spacing: 0.06em;
 }
 
-// Primary Font for headings
+@mixin script-font {
+  font-family: 'Marcellus', 'Italiana', 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+@mixin body-font {
+  font-family: 'Josefin Sans', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
 @mixin heading-font {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-family: 'Marcellus', 'Italiana', 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+// Art Deco Decorative Mixins
+// Stepped corners using clip-path (ziggurat style)
+@mixin stepped-corners($size: 12px) {
+  clip-path: polygon(
+    0% $size,
+    0% 0%,
+    calc(100% - $size) 0%,
+    100% 0%,
+    100% calc(100% - $size),
+    100% 100%,
+    $size 100%,
+    0% 100%,
+    0% $size
+  );
+}
+
+// Corner bracket decorations (L-shaped lines at opposite corners)
+@mixin corner-brackets($color: $gold, $size: 8px, $thickness: 2px) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $size;
+    left: $size;
+    width: $size;
+    height: $size;
+    border-top: $thickness solid $color;
+    border-left: $thickness solid $color;
+    opacity: 0.6;
+    transition: opacity $motion-standard;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: $size;
+    right: $size;
+    width: $size;
+    height: $size;
+    border-bottom: $thickness solid $color;
+    border-right: $thickness solid $color;
+    opacity: 0.6;
+    transition: opacity $motion-standard;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// Section divider with horizontal lines
+@mixin section-divider-horizontal($color: $gold) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin: $space-4 0;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 0 0 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color, transparent);
+  }
+}
+
+// Rotated diamond container (45-degree rotation)
+@mixin rotated-diamond($size: 80px, $color: $gold) {
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $color;
+  transform: rotate(45deg);
+  position: relative;
+
+  & > * {
+    transform: rotate(-45deg);
+  }
+}
+
+// Glow effect (Art Deco neon/backlit effect)
+@mixin glow-effect($color: $gold, $intensity: 0.2) {
+  box-shadow: 0 0 15px rgba($color, $intensity), 0 0 30px rgba($color, $intensity * 0.5);
+}
+
+// Enhanced glow on hover
+@mixin glow-hover($color: $gold) {
+  &:hover {
+    @include glow-effect($color, 0.4);
+  }
 }

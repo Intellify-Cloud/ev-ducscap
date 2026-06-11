@@ -1,6 +1,23 @@
+// Styling for the clients / lender partners section
 .clients-section {
   .row {
     margin-top: $space-4;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    padding-top: $space-4;
+  }
+
+  .section-heading {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+      margin: $space-2 auto;
+      width: 100px;
+    }
   }
 }
 
@@ -14,24 +31,32 @@
 
   a {
     align-items: center;
-    border-radius: $radius-sm;
+    border: 1px solid rgba(212, 175, 55, 0.1);
     display: inline-flex;
     height: 100%;
     justify-content: center;
-    padding: $space-1;
-    transition: box-shadow $motion-fast, transform $motion-fast;
+    padding: $space-2;
+    transition: all $motion-standard;
     width: 100%;
+    border-radius: 0px;
 
     &:hover,
     &:focus {
-      box-shadow: $elevation-1;
+      border-color: rgba(212, 175, 55, 0.5);
+      box-shadow: $elevation-2, 0 0 20px rgba(212, 175, 55, 0.1);
       outline: 0;
       transform: translateY(-2px);
     }
   }
 
   img {
-    max-height: 82px;
+    max-height: 75px;
     object-fit: contain;
+    filter: grayscale(40%) brightness(1.1);
+    transition: filter $motion-standard;
+
+    .client-logo a:hover & {
+      filter: grayscale(0%) brightness(1.2);
+    }
   }
 }

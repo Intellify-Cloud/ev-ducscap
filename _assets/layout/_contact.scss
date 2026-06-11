@@ -1,9 +1,17 @@
-// Styling for the contact section
+// Styling for the contact section — Art Deco chamber
 #contact {
-  background-color: $surface-muted;
+  background-color: $obsidian;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  position: relative;
 
   .section-heading {
-    color: $text-strong;
+    @extend .h2;
+    color: $champagne;
+    margin-bottom: $space-2;
+  }
+
+  .section-subheading {
+    @extend .section-subheading;
   }
 }
 
@@ -26,20 +34,40 @@
     line-height: $line-height-body;
     margin: 0 auto $space-4;
     max-width: $content-measure;
+    color: $pewter;
+    font-family: 'Josefin Sans', sans-serif;
   }
 }
 
 .contact-details-card,
 .contact-form-card {
-  background: $surface;
-  border: 1px solid rgba($gray-300, 0.35);
-  border-radius: $radius-lg;
+  background: $charcoal;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 0px;
   box-shadow: $elevation-1;
-  transition: box-shadow $motion-standard, transform $motion-standard;
+  transition: all $motion-theatrical;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+    transform: scaleX(0);
+    transition: transform $motion-theatrical;
+  }
 
   &:hover,
   &:focus-within {
-    box-shadow: $elevation-2;
+    box-shadow: $elevation-3, 0 0 25px rgba(212, 175, 55, 0.12);
+    border-color: rgba(212, 175, 55, 0.4);
+
+    &::after {
+      transform: scaleX(1);
+    }
   }
 }
 
@@ -47,11 +75,28 @@
   flex: 0 0 360px;
   max-width: 360px;
   padding: $space-4;
+  position: relative;
 }
 
 .contact-hours-card {
   flex: 1;
   min-width: 0;
+  padding: $space-4;
+  background: $charcoal;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 0px;
+  box-shadow: $elevation-1;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+  }
 }
 
 .contact-details-card--wide {
@@ -64,20 +109,24 @@
   display: flex;
   gap: $space-2;
   margin-bottom: $space-4;
+  padding-bottom: $space-3;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .contact-details-icon {
-  color: $primary;
-  font-size: 1.75rem;
+  color: $gold;
+  font-size: 1.5rem;
 }
 
 .contact-details-title {
-  color: $text-strong;
+  color: $champagne;
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: $line-height-heading;
   margin: 0;
-  text-transform: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'Marcellus', serif;
 }
 
 .contact-methods {
@@ -86,32 +135,36 @@
 }
 
 .contact-details-note {
-  border-top: 1px solid rgba($gray-300, 0.45);
-  color: $gray-600;
-  font-size: 0.95rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  color: $pewter;
+  font-size: 0.9rem;
   font-style: italic;
   line-height: $line-height-body;
   margin: $space-4 0 0;
   padding-top: $space-3;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .contact-method {
   align-items: center;
-  border-radius: $radius-md;
-  color: $text-strong;
+  border-radius: 0px;
+  color: $champagne;
   display: flex;
   gap: $space-2;
-  padding: $space-2;
-  transition: background-color $motion-fast, box-shadow $motion-fast, color $motion-fast, transform $motion-fast;
+  padding: $space-3;
+  transition: all $motion-fast;
+  border: 1px solid transparent;
+  text-decoration: none;
 
   &:hover,
   &:focus-visible {
-    background: $brand-primary-soft;
-    box-shadow: $elevation-1;
-    color: $text-strong;
+    background: rgba(212, 175, 55, 0.05);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: $elevation-1, inset 0 0 20px rgba(212, 175, 55, 0.03);
+    color: $champagne;
     outline: 0;
     text-decoration: none;
-    transform: translateY(-1px);
+    transform: translateX(2px);
   }
 
   strong,
@@ -120,33 +173,45 @@
   }
 
   strong {
-    color: $text-strong;
-    font-size: 0.9rem;
+    color: $champagne;
+    font-size: 0.85rem;
     line-height: $line-height-heading;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: 'Marcellus', serif;
   }
 
   span span {
-    color: $gray-600;
+    color: $pewter;
     font-size: 0.9rem;
     line-height: $line-height-body;
+    font-family: 'Josefin Sans', sans-serif;
   }
 }
 
 .contact-method-icon {
   align-items: center;
-  background: $brand-primary-soft;
-  border-radius: $radius-sm;
-  color: $primary;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 0px;
+  color: $gold;
   display: inline-flex;
   flex: 0 0 46px;
   font-size: 1.1rem;
   height: 46px;
   justify-content: center;
   width: 46px;
+  transition: all $motion-fast;
+
+  .contact-method:hover & {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: $gold;
+  }
 }
 
 .contact-us p {
   margin-bottom: 0.25em;
+  color: $champagne;
 }
 
 @media (max-width: 780px) {
@@ -159,5 +224,4 @@
     flex: none;
     max-width: 100%;
   }
-
 }

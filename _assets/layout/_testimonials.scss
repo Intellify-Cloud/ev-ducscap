@@ -1,4 +1,46 @@
-// Styling for the team section
+// Styling for the testimonials section — Art Deco quotation chamber
+#testimonials {
+  background-color: $obsidian;
+  position: relative;
+
+  .section-heading {
+    @extend .h2;
+    color: $champagne;
+    margin-bottom: $space-2;
+  }
+
+  .textblock-subheading {
+    @extend .section-subheading;
+    margin-bottom: $space-5;
+  }
+
+  .team-member {
+    @extend .card-art-deco;
+    padding: $space-4;
+    text-align: left;
+  }
+
+  blockquote {
+    border-left: 2px solid $gold;
+    padding-left: $space-3;
+    margin: $space-3 0;
+    font-style: italic;
+    color: $champagne;
+    font-family: 'Josefin Sans', sans-serif;
+
+    p {
+      color: $pewter;
+    }
+  }
+
+  h5 {
+    @extend .card-title-art-deco;
+    margin-top: $space-3;
+    margin-bottom: $space-1;
+  }
+}
+
+// Legacy styles for compatibility
 .team-member {
   margin-bottom: 50px;
   text-align: center;

@@ -1,84 +1,114 @@
-
-
-// Button styling
+// Button styling — Art Deco Precision Instruments
 .btn {
   @include heading-font;
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 0.8rem;
   text-transform: uppercase;
+  letter-spacing: 0.15em;
   cursor: pointer;
   border: 2px solid transparent;
-  border-radius: 999px;
-  padding: 12px 24px;
+  border-radius: 0px;
+  padding: 14px 28px;
   margin: 8px;
-  min-height: 48px;
-  transition: background-color $motion-fast, border-color $motion-fast, box-shadow $motion-fast, color $motion-fast, transform $motion-fast;
+  min-height: 52px;
+  transition: background-color $motion-standard, border-color $motion-standard,
+    box-shadow $motion-standard, color $motion-standard, transform $motion-fast;
+  position: relative;
 
   &:focus-visible {
     outline: 0;
     box-shadow: $focus-ring;
   }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 .btn-xl {
-  font-size: 18px;
-  padding: 16px 32px;
+  font-size: 0.9rem;
+  padding: 18px 40px;
+  letter-spacing: 0.2em;
 }
 
+// Primary — Gold background, obsidian text
 .btn-primary {
-  background-color: $primary;
-  color: $white;
+  background-color: $gold;
+  color: $obsidian;
+  border: 2px solid $gold;
   box-shadow: $elevation-1;
-  
+
   &:hover,
   &:focus {
-    background-color: $secondary;
-    border-color: $secondary;
-    color: $white;
-    box-shadow: $elevation-2;
+    background-color: $gold-light;
+    border-color: $gold-light;
+    color: $obsidian;
+    box-shadow: $elevation-2, 0 0 30px rgba(212, 175, 55, 0.3);
     transform: translateY(-1px);
   }
 
   &:active {
-    transform: translateY(0);
-    background-color: $primary;
-    color: $white;
+    transform: translateY(0) scale(0.98);
+    background-color: darken($gold, 8%);
+    color: $obsidian;
   }
 }
 
+// Outline — Transparent, gold border
 .btn-outline-primary {
-  background-color: $white;
-  border: 2px solid $primary;
-  color: $primary;
+  background-color: transparent;
+  border: 2px solid $gold;
+  color: $gold;
 
   &:hover {
-    background-color: $primary;
-    border: 2px solid $primary;
-    color: $white;
+    background-color: rgba(212, 175, 55, 0.08);
+    border-color: $gold;
+    color: $gold-light;
+    box-shadow: $elevation-2, 0 0 20px rgba(212, 175, 55, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+// Accent — Midnight blue, champagne text
+.btn-accent {
+  background-color: $midnight;
+  color: $champagne;
+  border: 2px solid $midnight;
+  box-shadow: $elevation-1;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($midnight, 8%);
+    border-color: $gold;
+    color: $champagne;
+    box-shadow: $elevation-2, 0 0 20px rgba(30, 61, 89, 0.4);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+    background-color: darken($midnight, 5%);
+    color: $champagne;
+  }
+}
+
+// Ghost — minimal, for secondary actions
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: $gold;
+
+  &:hover {
+    background-color: rgba(212, 175, 55, 0.06);
+    border-color: $gold;
+    color: $champagne;
     box-shadow: $elevation-1;
   }
 
   &:active {
-    transform: translateY(0);
-  }
-}
-
-.btn-accent {
-  background-color: $accent;
-  color: $primary;
-  border: 2px solid transparent;
-
-  &:hover,
-  &:focus {
-    background-color: darken($accent, 10%);
-    border-color: darken($accent, 10%);
-    color: $primary;
-    box-shadow: $elevation-2;
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0);
-    background-color: $accent;
-    color: $primary;
+    transform: scale(0.98);
   }
 }

@@ -1,60 +1,111 @@
 // Styling for the calculators section
 .calculators-heading {
   margin: $space-3 0 $space-2;
-  font-size: 24px;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: $line-height-heading;
+  font-family: 'Marcellus', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $champagne;
 }
 
 .calculators-section {
-  background-color: $primary;
+  background-color: $obsidian;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  position: relative;
+
+  &::before {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(212, 175, 55, 0.04) 0%,
+      transparent 60%
+    );
+    content: "";
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+  }
 
   .section-heading,
   .section-subheading {
-    color: $white;
+    color: $champagne;
+  }
+
+  .section-heading {
+    @extend .h2;
+    color: $champagne;
+    margin-bottom: $space-2;
+  }
+
+  .section-subheading {
+    @extend .section-subheading;
+    color: $pewter;
   }
 
   .card-deck {
-    gap: $space-3;
-  }
+    gap: $space-4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: $space-5;
 
-  .card {
-    min-width: 0;
-    border: 0;
-    border-radius: $radius-md;
-    box-shadow: $elevation-1;
-    color: $text-strong;
-    overflow: hidden;
-    transition: box-shadow $motion-standard, transform $motion-standard;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-    &:hover,
-    &:focus-within {
-      box-shadow: $elevation-3;
-      transform: translateY(-4px);
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
     }
   }
 
+  .card {
+    @extend .card-art-deco;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   .card-body {
-    padding: $space-4 $space-3 $space-3;
+    padding: $space-4;
+    flex: 1;
   }
 
   .card-title {
-    color: $text-strong;
+    @extend .card-title-art-deco;
+    margin-bottom: $space-2;
   }
 
   .card-footer {
-    border: 0;
-    background: $surface;
-    padding: 0 $space-3 $space-3;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    background: transparent;
+    padding: $space-3 $space-4 $space-4;
   }
 
   .fa-stack {
-    margin-bottom: $space-1;
+    @include rotated-diamond(72px, $gold);
+    margin: 0 auto $space-3;
+    background-color: rgba(212, 175, 55, 0.04);
+    color: $gold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .fa-stack-2x { display: none; }
+    .fa-stack-1x { font-size: 1.5rem !important; }
+  }
+
+  .text-muted {
+    color: $pewter;
+    font-size: 0.9rem;
+    margin-top: $space-2;
   }
 
   .btn {
+    margin-top: $space-2;
     margin-bottom: 0;
     white-space: normal;
+    border-radius: 0px;
   }
 }
 

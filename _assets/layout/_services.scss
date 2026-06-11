@@ -1,13 +1,31 @@
 // Styling for the services section
 .service-heading {
   margin: $space-3 0 $space-2;
-  font-size: 24px;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: $line-height-heading;
+  font-family: 'Marcellus', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $champagne;
 }
 
 .services-section {
   background-color: $surface-muted;
+  position: relative;
+
+  &::before {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.03) 50%,
+      transparent 100%
+    );
+    content: "";
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+  }
 }
 
 .services {
@@ -15,21 +33,40 @@
 }
 
 #services .card {
-  border: none;
+  border: 1px solid rgba(212, 175, 55, 0.2);
   box-shadow: $elevation-1;
-  border-radius: $radius-md;
+  border-radius: 0px;
   overflow: hidden;
-  transition: box-shadow $motion-standard, transform $motion-standard;
-  color: $text-strong;
+  transition: all $motion-theatrical;
+  color: $champagne;
+  background: $charcoal;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+    transform: scaleX(0);
+    transition: transform $motion-theatrical;
+  }
 
   &:hover {
-    box-shadow: $elevation-2;
-    transform: translateY(-3px);
+    box-shadow: $elevation-3, 0 0 30px rgba(212, 175, 55, 0.15);
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.5);
+
+    &::after {
+      transform: scaleX(1);
+    }
   }
 
   &:focus-within {
-    box-shadow: $elevation-2;
-    transform: translateY(-3px);
+    box-shadow: $elevation-3, 0 0 20px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.5);
   }
 }
 
@@ -37,23 +74,29 @@
   padding: $space-4 $space-3 $space-3;
 }
 
+#services .card .card-title {
+  color: $gold;
+}
+
 #services .card .card-footer {
   border: none;
-  background: $surface;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  background: rgba(212, 175, 55, 0.03);
   padding: 0 $space-3 $space-3;
 }
 
 #services .btn {
   margin-bottom: 0;
   font-weight: 500;
-  color: $white;
-  
+  border-radius: 0px;
+  letter-spacing: 0.1em;
+
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 
   &:active {
-    transform: translateY(1px);
+    transform: translateY(1px) scale(0.98);
   }
 }
 

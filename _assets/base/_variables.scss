@@ -1,51 +1,64 @@
 // Variables
-
 // Restated Bootstrap Variables
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-100: #1a1a1a !default;
+$gray-200: #222222 !default;
+$gray-300: #2e2e2e !default;
+$gray-400: #3d3d3d !default;
+$gray-500: #5a5a5a !default;
+$gray-600: #888888 !default;
+$gray-700: #6e6e6e !default;
+$gray-800: #3a3a3a !default;
+$gray-900: #2a2a2a !default;
 
-$brand-primary: #1D2944 !default;
-$brand-secondary: #3A65AB !default;
-$brand-accent: #D4AF37 !default;
-$surface: #ffffff !default;
-$surface-muted: #f6f8f9 !default;
-$text-strong: #172126 !default;
-$text-muted: #5d6970 !default;
+// Art Deco Dark Luxury Palette
+$obsidian: #0A0A0A;
+$champagne: #F2F0E4;
+$charcoal: #141414;
+$gold: #D4AF37;
+$midnight: #1E3D59;
+$pewter: #888888;
+$gold-light: #F2E8C4;
 
-$radius-sm: 6px !default;
-$radius-md: 10px !default;
-$radius-lg: 18px !default;
-$focus-ring: 0 0 0 0.2rem rgba($brand-primary, 0.28) !default;
-$elevation-1: 0 4px 14px rgba(23, 33, 38, 0.08) !default;
-$elevation-2: 0 10px 28px rgba(23, 33, 38, 0.14) !default;
-$elevation-3: 0 16px 40px rgba(23, 33, 38, 0.18) !default;
-$motion-fast: 160ms ease !default;
-$motion-standard: 240ms ease !default;
+$brand-primary: $obsidian !default;
+$brand-primary-dark: darken($brand-primary, 8%) !default;
+$brand-primary-soft: rgba($brand-primary, 0.12) !default;
+$brand-secondary: $midnight !default;
+$brand-accent: $gold !default;
+$surface: #141414 !default;
+$surface-muted: #111111 !default;
+$text-strong: #F2F0E4 !default;
+$text-muted: #888888 !default;
+
+$radius-sm: 2px !default;
+$radius-md: 0px !default;
+$radius-lg: 0px !default;
+$focus-ring: 0 0 0 2px rgba(212, 175, 55, 0.6) !default;
+$elevation-1: 0 0 15px rgba(212, 175, 55, 0.08) !default;
+$elevation-2: 0 0 25px rgba(212, 175, 55, 0.15) !default;
+$elevation-3: 0 0 40px rgba(212, 175, 55, 0.25) !default;
+$motion-fast: 200ms ease-out !default;
+$motion-standard: 300ms ease-out !default;
+$motion-theatrical: 500ms ease-in-out !default;
 
 $phi: 1.618 !default;
-$space-1: 0.618rem !default;
+$space-1: 0.5rem !default;
 $space-2: 1rem !default;
-$space-3: 1.618rem !default;
-$space-4: 2.618rem !default;
-$space-5: 4.236rem !default;
-$space-6: 6.854rem !default;
-$line-height-body: 1.618 !default;
-$line-height-heading: 1.236 !default;
-$line-height-tight: 1.145 !default;
+$space-3: 1.5rem !default;
+$space-4: 2rem !default;
+$space-5: 3rem !default;
+$space-6: 5rem !default;
+$line-height-body: 1.75 !default;
+$line-height-heading: 1.2 !default;
+$line-height-tight: 1.1 !default;
 $section-padding-y-mobile: $space-5 !default;
 $section-padding-y-desktop: $space-6 !default;
-$content-measure: 68ch !default;
+$content-measure: 72ch !default;
 
 :root {
   --brand-primary: #{$brand-primary};
   --brand-primary-dark: #{$brand-primary-dark};
+  --brand-secondary: #{$brand-secondary};
+  --brand-accent: #{$brand-accent};
   --surface: #{$surface};
   --surface-muted: #{$surface-muted};
   --text-strong: #{$text-strong};
@@ -60,4 +73,3 @@ $content-measure: 68ch !default;
   --space-5: #{$space-5};
   --space-6: #{$space-6};
 }
-

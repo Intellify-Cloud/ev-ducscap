@@ -1,0 +1,432 @@
+// Card Components — Art Deco Framed Exhibits
+// Enhanced styling with decorative elements, stepped corners, and theatrical interactions
+
+// Base Card Container
+.card-art-deco {
+  background: $charcoal;
+  border: 1px solid rgba($gold, 0.3);
+  border-radius: 0px;
+  box-shadow: $elevation-1;
+  transition: all $motion-standard;
+  position: relative;
+  overflow: hidden;
+
+  @include corner-brackets($gold, 8px, 2px);
+
+  &::before {
+    border-color: rgba($gold, 0.4);
+  }
+
+  &::after {
+    border-color: rgba($gold, 0.4);
+  }
+
+  &:hover,
+  &:focus-within {
+    border-color: rgba($gold, 0.6);
+    box-shadow: $elevation-2, 0 0 25px rgba($gold, 0.12);
+    transform: translateY(-2px);
+
+    &::before,
+    &::after {
+      border-color: rgba($gold, 0.8);
+      opacity: 1;
+    }
+  }
+}
+
+// Card with Stepped Corners (ziggurat style)
+.card-stepped {
+  @include stepped-corners(8px);
+}
+
+// Card Header with Gold Bottom Border
+.card-header-art-deco {
+  background: transparent;
+  border-bottom: 2px solid rgba($gold, 0.3);
+  padding: $space-4;
+  transition: border-color $motion-fast;
+
+  .card:hover & {
+    border-bottom-color: rgba($gold, 0.6);
+  }
+}
+
+// Card Title (Display Typography)
+.card-title-art-deco {
+  font-family: 'Marcellus', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $gold;
+  line-height: $line-height-heading;
+  margin: 0;
+}
+
+// Card Subtitle
+.card-subtitle-art-deco {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.9rem;
+  color: $pewter;
+  margin: $space-2 0 0;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+// Card Body Padding
+.card-body-art-deco {
+  padding: $space-4;
+  color: $champagne;
+  line-height: $line-height-body;
+
+  p {
+    margin-bottom: $space-2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Card Footer with Top Border
+.card-footer-art-deco {
+  background: transparent;
+  border-top: 1px solid rgba($gold, 0.15);
+  padding: $space-4;
+  transition: border-color $motion-fast;
+
+  .card:hover & {
+    border-top-color: rgba($gold, 0.3);
+  }
+}
+
+// Icon Card (with rotated diamond container)
+.card-icon {
+  text-align: center;
+
+  .card-icon-wrapper {
+    @include rotated-diamond(80px, $gold);
+    margin: $space-4 auto;
+    background-color: rgba($gold, 0.05);
+    transition: all $motion-standard;
+
+    i,
+    svg {
+      font-size: 2rem;
+      color: $gold;
+    }
+  }
+
+  &:hover .card-icon-wrapper {
+    background-color: rgba($gold, 0.12);
+    @include glow-effect($gold, 0.25);
+  }
+}
+
+// Feature Card (with icon, title, description)
+.card-feature {
+  @extend .card-art-deco;
+  text-align: center;
+
+  .feature-icon {
+    @include rotated-diamond(64px, $gold);
+    margin: $space-4 auto $space-3;
+    background-color: rgba($gold, 0.04);
+  }
+
+  .feature-title {
+    @extend .card-title-art-deco;
+    margin-bottom: $space-2;
+  }
+
+  .feature-description {
+    color: $pewter;
+    font-size: 0.95rem;
+    line-height: $line-height-body;
+  }
+}
+
+// Testimonial Card
+.card-testimonial {
+  @extend .card-art-deco;
+  display: flex;
+  flex-direction: column;
+
+  .testimonial-quote {
+    font-size: 2rem;
+    color: rgba($gold, 0.3);
+    font-family: 'Marcellus', serif;
+    margin-bottom: $space-2;
+    line-height: 1;
+  }
+
+  .testimonial-text {
+    flex: 1;
+    color: $champagne;
+    font-size: 0.95rem;
+    line-height: $line-height-body;
+    margin-bottom: $space-3;
+    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .testimonial-author {
+    border-top: 1px solid rgba($gold, 0.2);
+    padding-top: $space-3;
+  }
+
+  .author-name {
+    font-family: 'Marcellus', serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $gold;
+    margin-bottom: $space-1;
+  }
+
+  .author-title {
+    font-size: 0.8rem;
+    color: $pewter;
+    font-weight: 300;
+  }
+}
+
+// Pricing Card (emphasis variant)
+.card-pricing {
+  @extend .card-art-deco;
+  border: 2px solid $gold;
+  position: relative;
+
+  &.pricing-featured {
+    transform: scale(1.05);
+    box-shadow: $elevation-3, 0 0 40px rgba($gold, 0.2);
+
+    .pricing-badge {
+      display: flex;
+    }
+  }
+
+  &:hover {
+    box-shadow: $elevation-3, 0 0 40px rgba($gold, 0.25);
+  }
+
+  .pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $gold;
+    color: $obsidian;
+    padding: $space-1 $space-3;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Marcellus', serif;
+    display: none;
+  }
+
+  .pricing-header {
+    text-align: center;
+    padding: $space-4;
+    border-bottom: 1px solid rgba($gold, 0.2);
+  }
+
+  .pricing-title {
+    @extend .card-title-art-deco;
+    margin-bottom: $space-2;
+  }
+
+  .pricing-amount {
+    font-size: 2.5rem;
+    font-family: 'Marcellus', serif;
+    font-weight: 400;
+    color: $gold;
+    line-height: 1;
+  }
+
+  .pricing-currency {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .pricing-period {
+    font-size: 0.8rem;
+    color: $pewter;
+    margin-top: $space-1;
+  }
+
+  .pricing-features {
+    list-style: none;
+    padding: $space-4;
+    margin: 0;
+
+    li {
+      padding: $space-2 0;
+      border-bottom: 1px solid rgba($gold, 0.1);
+      color: $champagne;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &::before {
+        content: "✓";
+        color: $gold;
+        margin-right: $space-2;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .pricing-footer {
+    padding: $space-4;
+    border-top: 1px solid rgba($gold, 0.15);
+  }
+}
+
+// Portfolio/Gallery Card
+.card-portfolio {
+  @extend .card-art-deco;
+  overflow: hidden;
+
+  .portfolio-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter $motion-theatrical, transform $motion-theatrical;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, rgba($gold, 0.1));
+      opacity: 0;
+      transition: opacity $motion-standard;
+    }
+  }
+
+  &:hover .portfolio-image {
+    img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  .portfolio-content {
+    padding: $space-4;
+  }
+
+  .portfolio-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $gold;
+    margin-bottom: $space-1;
+    font-family: 'Marcellus', serif;
+  }
+
+  .portfolio-title {
+    @extend .card-title-art-deco;
+    margin-bottom: $space-2;
+  }
+}
+
+// Stat Card (for metrics/numbers)
+.card-stat {
+  @extend .card-art-deco;
+  text-align: center;
+  padding: $space-5 $space-4;
+
+  .stat-number {
+    font-family: 'Marcellus', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: $gold;
+    line-height: 1;
+    margin-bottom: $space-2;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, $gold, transparent);
+      margin: $space-2 auto 0;
+    }
+  }
+
+  .stat-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $pewter;
+    font-weight: 400;
+  }
+}
+
+// Card with Horizontal Divider Line
+.card-with-divider {
+  @extend .card-art-deco;
+
+  .card-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba($gold, 0.3), transparent);
+    margin: $space-3 0;
+  }
+}
+
+// Minimal Card (reduced styling for tight layouts)
+.card-minimal {
+  background: transparent;
+  border: 1px solid rgba($gold, 0.2);
+  box-shadow: none;
+  padding: $space-3;
+  transition: all $motion-fast;
+
+  &:hover {
+    border-color: rgba($gold, 0.5);
+    background: rgba($gold, 0.02);
+  }
+}
+
+// Card Grid Container
+.card-grid {
+  display: grid;
+  gap: $space-4;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+
+    &.grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}

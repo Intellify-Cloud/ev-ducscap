@@ -20,15 +20,13 @@
 .team-hours-card,
 .team-featured-card,
 .team-card-v {
-  background: $surface;
-  border: 1px solid rgba($gray-300, 0.35);
-  border-radius: $radius-lg;
-  box-shadow: $elevation-1;
+  @extend .card-art-deco;
   transition: box-shadow $motion-standard, transform $motion-standard;
 
   &:hover,
   &:focus-within {
-    box-shadow: $elevation-2;
+    box-shadow: $elevation-3;
+    transform: translateY(-2px);
   }
 }
 
@@ -48,17 +46,15 @@
 }
 
 .team-hours-icon {
-  color: $primary;
+  color: $gold;
   font-size: 1.75rem;
 }
 
 .team-hours-title,
 .team-featured-name,
 .team-card-name {
-  color: $text-strong;
-  font-weight: 800;
+  @extend .card-title-art-deco;
   margin: 0;
-  text-transform: none;
 }
 
 .team-hours-title {
@@ -68,7 +64,7 @@
 
 .team-hours-list {
   p {
-    color: $gray-700;
+    color: $pewter;
     font-size: 0.95rem;
     line-height: $line-height-body;
     margin: 0 0 $space-1;
@@ -81,21 +77,21 @@
 
 .team-hours-note {
   align-items: flex-start;
-  border-top: 1px solid rgba($gray-300, 0.45);
+  border-top: 1px solid rgba($gold, 0.2);
   display: flex;
   gap: $space-1;
   margin-top: $space-4;
   padding-top: $space-3;
 
   i {
-    color: $gray-500;
+    color: $gold;
     flex-shrink: 0;
     font-size: 0.95rem;
     margin-top: 0.25rem;
   }
 
   span {
-    color: $gray-600;
+    color: $pewter;
     font-size: 0.875rem;
     font-style: italic;
     line-height: $line-height-body;

@@ -1,0 +1,455 @@
+// Section Headers & Dividers — Art Deco Theatrical Presentation
+// Architectural elements that frame and emphasize content sections
+
+// Section Heading Base
+.section-heading {
+  font-family: 'Marcellus', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $champagne;
+  line-height: $line-height-tight;
+  margin: 0;
+}
+
+.section-subheading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: $pewter;
+  margin: $space-3 0 0;
+  max-width: 80ch;
+  line-height: $line-height-body;
+}
+
+// Centered Section Header with Decorative Lines
+.section-header-centered {
+  text-align: center;
+  position: relative;
+  margin: $space-6 0 $space-5;
+
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    padding: 0 $space-4;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 80px;
+    background: linear-gradient(90deg, transparent, rgba($gold, 0.5), transparent);
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  .section-subheading {
+    margin: $space-3 auto 0;
+  }
+}
+
+// Left-Aligned Section Header with Left Divider
+.section-header-left {
+  position: relative;
+  margin: $space-5 0 $space-4;
+  padding-left: $space-5;
+
+  .section-heading {
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, rgba($gold, 0.6), rgba($gold, 0.1), transparent);
+  }
+
+  .section-subheading {
+    margin: $space-2 0 0;
+    max-width: 60ch;
+  }
+}
+
+// Right-Aligned Section Header with Right Divider
+.section-header-right {
+  position: relative;
+  margin: $space-5 0 $space-4;
+  padding-right: $space-5;
+  text-align: right;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, rgba($gold, 0.6), rgba($gold, 0.1), transparent);
+  }
+
+  .section-subheading {
+    margin: $space-2 0 0;
+    max-width: 60ch;
+    margin-left: auto;
+  }
+}
+
+// Section Header with Horizontal Rule Below
+.section-header-rule {
+  text-align: center;
+  margin: $space-6 0 $space-5;
+  padding-bottom: $space-4;
+  border-bottom: 1px solid rgba($gold, 0.2);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $gold, transparent);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2px;
+  }
+
+  .section-heading {
+    margin-bottom: $space-2;
+  }
+}
+
+// Section Header with Top and Bottom Lines
+.section-header-sandwiched {
+  text-align: center;
+  position: relative;
+  margin: $space-6 0 $space-5;
+  padding: $space-4 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba($gold, 0.4), transparent);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  .section-heading {
+    position: relative;
+    margin: 0;
+  }
+
+  .section-subheading {
+    margin: $space-3 auto 0;
+  }
+}
+
+// Section Header with Accent Bar (left side)
+.section-header-accent {
+  position: relative;
+  margin: $space-5 0 $space-4;
+  padding-left: $space-5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 32px;
+    background: $gold;
+  }
+
+  .section-heading {
+    margin-bottom: $space-1;
+  }
+
+  .section-subheading {
+    margin-top: $space-2;
+  }
+}
+
+// Stacked Section Header (heading above subheading with space)
+.section-header-stacked {
+  text-align: center;
+  margin: $space-6 0 $space-5;
+
+  .section-heading {
+    margin-bottom: $space-4;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -$space-3;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, $gold, transparent);
+    }
+  }
+
+  .section-subheading {
+    margin: $space-5 auto 0;
+  }
+}
+
+// Numbered Section Header (with Roman numerals)
+.section-header-numbered {
+  position: relative;
+  margin: $space-5 0 $space-4;
+  padding-left: $space-6;
+
+  .section-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'Marcellus', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgba($gold, 0.3);
+    line-height: 1;
+  }
+
+  .section-heading {
+    margin-bottom: $space-1;
+  }
+
+  .section-subheading {
+    margin-top: $space-2;
+  }
+}
+
+// Horizontal Divider with Centered Text
+.divider-with-text {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin: $space-5 0;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba($gold, 0.3), transparent);
+  }
+
+  .divider-text {
+    flex: 0 0 auto;
+    font-family: 'Marcellus', serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $gold;
+    white-space: nowrap;
+  }
+}
+
+// Vertical Line Divider (for multi-column sections)
+.divider-vertical-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba($gold, 0.3), transparent);
+  }
+}
+
+// Mini Section Header (for small sections or subsections)
+.section-header-mini {
+  margin: $space-4 0 $space-3;
+
+  .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: $space-1;
+  }
+
+  .section-subheading {
+    font-size: 0.9rem;
+  }
+}
+
+// Section Step Counter (for process/timeline sections)
+.section-step-counter {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-4;
+  margin: $space-4 0;
+
+  .step-number {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $gold;
+    font-family: 'Marcellus', serif;
+    font-size: 1.25rem;
+    color: $gold;
+    font-weight: 400;
+    background: rgba($gold, 0.04);
+    transition: all $motion-standard;
+  }
+
+  .step-content {
+    flex: 1;
+    padding-top: $space-1;
+  }
+
+  .step-title {
+    font-family: 'Marcellus', serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $champagne;
+    margin-bottom: $space-1;
+  }
+
+  .step-description {
+    color: $pewter;
+    font-size: 0.95rem;
+    line-height: $line-height-body;
+  }
+
+  &:hover .step-number {
+    background: rgba($gold, 0.1);
+    box-shadow: 0 0 15px rgba($gold, 0.15);
+  }
+}
+
+// Hero Section Title (largest, most theatrical)
+.hero-title {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $champagne;
+  line-height: $line-height-tight;
+  margin: 0;
+
+  &.hero-title-gold {
+    color: $gold;
+  }
+
+  &.hero-title-large {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+  }
+}
+
+// Hero Subtitle (supporting text for hero)
+.hero-subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: $champagne;
+  line-height: $line-height-body;
+  max-width: 60ch;
+  margin: $space-4 0 0;
+
+  &.hero-subtitle-muted {
+    color: $pewter;
+  }
+}
+
+// Page Title (for page headers)
+.page-title {
+  font-family: 'Marcellus', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $champagne;
+  line-height: $line-height-tight;
+  margin: $space-4 0 $space-2;
+  position: relative;
+  display: inline-block;
+  padding-bottom: $space-3;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, $gold, transparent);
+  }
+}
+
+// Breadcrumb Navigation
+.breadcrumb-art-deco {
+  background: transparent;
+  padding: $space-2 0;
+  margin: $space-3 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-1;
+
+  .breadcrumb-item {
+    font-size: 0.85rem;
+    color: $pewter;
+
+    &::before {
+      content: "›";
+      margin: 0 $space-1;
+      color: $gold;
+    }
+
+    &:first-child::before {
+      content: "";
+      margin: 0;
+    }
+
+    a {
+      color: $gold;
+      text-decoration: none;
+      transition: color $motion-fast;
+
+      &:hover {
+        color: $gold-light;
+      }
+    }
+
+    &.active {
+      color: $champagne;
+    }
+  }
+}

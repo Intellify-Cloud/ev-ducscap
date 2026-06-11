@@ -2,21 +2,40 @@
 body {
   overflow-x: hidden;
   @include body-font;
-  background-color: #fbf9f6;
+  background-color: $obsidian;
   color: $text-strong;
   line-height: $line-height-body;
+
+  &::before {
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(212, 175, 55, 0.015) 20px,
+      rgba(212, 175, 55, 0.015) 21px
+    );
+    content: "";
+    inset: 0;
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 p {
   line-height: $line-height-body;
   margin-bottom: $space-3;
+  color: $champagne;
 }
 
 a {
-  color: $primary;
-  transition: color $motion-fast, box-shadow $motion-fast;
+  color: $gold;
+  transition: color $motion-fast, text-shadow $motion-fast;
+  text-decoration: none;
+
   &:hover {
-    color: darken($primary, 10%);
+    color: $gold-light;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
   }
 
   &:focus-visible {
@@ -52,10 +71,8 @@ textarea:focus:not(:focus-visible),
   box-shadow: none;
 }
 
-
-
 .text-primary {
-  color: $primary !important;
+  color: $gold !important;
 }
 
 .bg-surface-muted {
@@ -68,47 +85,70 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 900;
+  font-weight: 700;
   line-height: $line-height-heading;
   @include heading-font;
+  color: $champagne;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .page-section {
   padding: $section-padding-y-mobile $space-3;
+  position: relative;
+  z-index: 1;
 
   > .container {
     max-width: 1140px;
   }
 
   h2.section-heading {
-    font-size: 40px;
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
     margin-top: 0;
     margin-bottom: $space-2;
     line-height: $line-height-tight;
+    text-align: center;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, $gold, transparent);
+      margin: $space-2 auto;
+      width: 120px;
+    }
   }
 
   h3.section-subheading {
-    font-size: 1.3rem;
+    font-size: 1.125rem;
     font-weight: 400;
-    font-style: muted;
+    font-style: normal;
     line-height: $line-height-body;
     margin: 0 auto $space-5;
     max-width: $content-measure;
     text-transform: none;
-    @include serif-font;
+    text-align: center;
+    color: $pewter;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.02em;
   }
+
   h3.textblock-subheading {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    font-style: muted;
+    font-style: normal;
     line-height: $line-height-body;
     margin: 0 auto $space-4;
     max-width: $content-measure;
     text-transform: none;
-    @include serif-font;
+    text-align: center;
+    color: $pewter;
+    font-family: 'Josefin Sans', sans-serif;
   }
-
 }
+
 @media(min-width:768px) {
   section {
     padding: $section-padding-y-desktop 0;
@@ -134,15 +174,17 @@ h6 {
   }
 }
 
-// Highlight color customization
+// Highlight color — gold glow for text selection
 ::-moz-selection {
-  background: $primary;
+  background: rgba(212, 175, 55, 0.35);
   text-shadow: none;
+  color: $champagne;
 }
 
 ::selection {
-  background: $primary;
+  background: rgba(212, 175, 55, 0.35);
   text-shadow: none;
+  color: $champagne;
 }
 
 img::selection {
@@ -153,13 +195,58 @@ img::-moz-selection {
   background: transparent;
 }
 
-// ================ IFRAME
+// Gold divider utility
+.gold-divider {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, $gold, transparent);
+  margin: $space-3 auto;
+  width: 160px;
+  border: none;
+}
+
+// Corner embellishments
+.corner-bracket {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: $gold;
+    border-style: solid;
+    opacity: 0.7;
+    transition: opacity $motion-standard;
+  }
+
+  &::before {
+    top: 8px;
+    left: 8px;
+    border-width: 1px 0 0 1px;
+  }
+
+  &::after {
+    bottom: 8px;
+    right: 8px;
+    border-width: 0 1px 1px 0;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// ================ CALCULATOR PAGES
 .calculator-page {
-  background: $white;
+  background: $charcoal;
+  min-height: 80vh;
 }
 
 .calculator-page iframe {
-  background: $white;
+  background: $charcoal;
   display: block;
 }
 

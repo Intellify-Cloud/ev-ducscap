@@ -222,11 +222,5 @@ footer:
   data_sharing: "Data Sharing"
   social_label: "Social link"
   social:
-    # - url: https://twitter.com
-    #   icon: "fab fa-twitter"
-    # - url: https://www.facebook.com/ducescapital
-    #   icon: "fab fa-facebook-f"
-    # - url: https://linkedin.com
-    #   icon: "fab fa-linkedin-in"
-    # - url: https://www.instagram.com/ducescapital
-    #   icon: "fab fa-instagram"
+    - url: https://www.instagram.com/ducescapital/
+      icon: "fab fa-instagram"

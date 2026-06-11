@@ -1,21 +1,22 @@
-// Styling for the footer
+// Styling for the footer — Art Deco conclusion panel
 .footer {
-  background-color: $white;
-  padding: $space-4 0 30px;
+  background-color: $obsidian;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  padding: $space-5 0 30px;
   position: relative;
   text-align: center;
 
   &::before {
     background: linear-gradient(
       90deg,
-      rgba($primary, 0),
-      rgba($primary, 0.18) 22%,
-      rgba($primary, 0.68) 50%,
-      rgba($primary, 0.18) 78%,
-      rgba($primary, 0)
+      rgba(212, 175, 55, 0),
+      rgba(212, 175, 55, 0.15) 22%,
+      rgba(212, 175, 55, 0.5) 50%,
+      rgba(212, 175, 55, 0.15) 78%,
+      rgba(212, 175, 55, 0)
     );
     content: "";
-    height: 2px;
+    height: 1px;
     left: 50%;
     max-width: 760px;
     position: absolute;
@@ -24,18 +25,52 @@
     width: calc(100% - #{$space-4});
   }
 
-  span.copyright {
-    font-size: 90%;
+  .copyright {
+    font-size: 0.8rem;
     line-height: 40px;
-    text-transform: none;
-    @include heading-font;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $pewter;
+    font-family: 'Josefin Sans', sans-serif;
   }
+
   ul.quicklinks {
-    font-size: 90%;
+    font-size: 0.8rem;
     line-height: 40px;
     margin-bottom: 0;
-    text-transform: none;
-    @include heading-font;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $pewter;
+    font-family: 'Josefin Sans', sans-serif;
+
+    a {
+      color: $pewter;
+      transition: color $motion-fast;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+
+  a {
+    color: $pewter;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  small {
+    a {
+      color: rgba(212, 175, 55, 0.6);
+      text-decoration: none;
+      transition: color $motion-fast;
+
+      &:hover {
+        color: $gold;
+      }
+    }
   }
 }
 
@@ -44,37 +79,43 @@
   right: 8px;
   top: 85%;
 }
+
 .whatsapp h5 {
-  color: rgb(255, 255, 255);
-  background: #20b20f;
+  color: $obsidian;
+  background: $gold;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 0px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'Marcellus', serif;
 }
 
 ul.social-buttons {
   margin-bottom: 0;
+
   li {
     a {
       align-items: center;
-      background-color: $primary;
-      border-radius: 50%;
-      box-shadow: none;
-      color: $white;
+      background-color: transparent;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 0px;
+      color: $gold;
       display: inline-flex;
-      font-size: 20px;
-      height: 48px;
+      font-size: 18px;
+      height: 44px;
       justify-content: center;
       line-height: 1;
       outline: none;
-      transition: background-color $motion-fast, box-shadow $motion-fast, transform $motion-fast;
-      width: 48px;
+      transition: all $motion-fast;
+      width: 44px;
 
       &:active,
       &:focus-visible,
       &:hover {
-        background-color: $brand-primary-dark;
-        box-shadow: $elevation-1;
-        color: $white;
+        background-color: rgba(212, 175, 55, 0.12);
+        border-color: $gold;
+        box-shadow: $elevation-1, 0 0 15px rgba(212, 175, 55, 0.2);
+        color: $gold-light;
         transform: translateY(-1px);
       }
     }

@@ -1,120 +1,149 @@
-// Styling for the masthead
+// Styling for the masthead — Art Deco Hero with Sunburst
 header.masthead {
   text-align: center;
-  color: white;
-  background-color: $primary;
-  background-image: none;
+  color: $champagne;
+  background-color: $obsidian;
+  background-image: url("#{$header-image}");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  min-height: 70vh;
+  &::before {
+    background: rgba($obsidian, 0.65);
+    content: "";
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+  }
+  min-height: 85vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(212, 175, 55, 0.06) 0%,
+      rgba(212, 175, 55, 0.02) 35%,
+      transparent 70%
+    );
+    content: "";
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::after {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 80px,
+      rgba(212, 175, 55, 0.03) 80px,
+      rgba(212, 175, 55, 0.03) 81px
+    );
+    content: "";
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+  }
 
   .container {
     width: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   .intro-text {
     padding-top: $space-6;
     padding-bottom: $space-5;
+    max-width: 900px;
+    margin: 0 auto;
+
     .intro-lead-in {
-      font-size: 20px;
+      font-size: 1rem;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 400;
       line-height: $line-height-heading;
       margin-bottom: $space-3;
-      font-family: 'Inter', sans-serif;
-      color: rgba(255, 255, 255, 0.9);
+      font-family: 'Josefin Sans', sans-serif;
+      color: $pewter;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
     }
+
     .intro-heading {
-      font-size: 38px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 700;
       line-height: $line-height-tight;
       margin-bottom: $space-4;
-      font-family: 'Montserrat', sans-serif;
-      color: #ffffff;
+      font-family: 'Marcellus', serif;
+      color: $champagne;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
     }
   }
 }
 
-@media (min-width:320px) {
+@media (min-width: 320px) {
   header.masthead {
     min-height: 70vh;
 
     .intro-text {
-      padding-top: $space-6;
-      padding-bottom: $space-5;
+      padding-top: $space-4;
+      padding-bottom: $space-3;
+
       .intro-lead-in {
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: $line-height-heading;
-        margin-bottom: $space-3;
-        font-family: 'Inter', sans-serif;
-        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.85rem;
+        margin-bottom: $space-2;
       }
+
       .intro-heading {
-        font-size: 32px;
-        font-weight: 700;
-        line-height: $line-height-tight;
-        margin-bottom: $space-4;
-        font-family: 'Montserrat', sans-serif;
-        color: #ffffff;
+        font-size: 1.6rem;
+        margin-bottom: $space-3;
       }
     }
   }
 }
 
-@media(min-width:480px) {
+@media (min-width: 480px) {
   header.masthead {
     .intro-text {
-      padding-top: $space-6;
+      padding-top: $space-5;
+
       .intro-lead-in {
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: $line-height-heading;
-        margin-bottom: $space-3;
-        font-family: 'Inter', sans-serif;
-        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+        margin-bottom: $space-2;
       }
+
       .intro-heading {
-        font-size: 38px;
-        font-weight: 700;
-        line-height: $line-height-tight;
-        margin-bottom: $space-4;
-        font-family: 'Montserrat', sans-serif;
-        color: #ffffff;
+        font-size: 2rem;
+        margin-bottom: $space-3;
       }
     }
   }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   header.masthead {
-    min-height: 70vh;
+    min-height: 80vh;
 
     .intro-text {
       padding-top: $space-6;
       padding-bottom: $space-6;
+
       .intro-lead-in {
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: $line-height-heading;
+        font-size: 1rem;
         margin-bottom: $space-3;
-        font-family: 'Inter', sans-serif;
-        color: rgba(255, 255, 255, 0.9);
       }
+
       .intro-heading {
-        font-size: 38px;
-        font-weight: 700;
-        line-height: $line-height-tight;
-        margin-bottom: $space-4;
-        font-family: 'Montserrat', sans-serif;
-        color: #ffffff;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        margin-bottom: $space-5;
       }
     }
   }
