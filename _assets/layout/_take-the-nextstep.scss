@@ -11,6 +11,14 @@
   background-size: cover;
 }
 
+.take-the-nextstep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 41, 68, 0.75);
+  z-index: 0;
+}
+
 .take-the-nextstep__container {
   max-width: 980px;
   margin: 0 auto;

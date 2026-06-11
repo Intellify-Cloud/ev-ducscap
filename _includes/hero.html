@@ -17,31 +17,21 @@
 
   <!-- Content -->
   <div class="hero-content container">
-    <!-- Logo -->
-    <a class="hero-logo" href="{{ site.baseurl }}/#">
-      {%- if site.logo -%}
-        <img src="{{ site.logo.path | relative_url }}" alt="{{ site.title | default: site.company }}" width="auto" height="90"/>
-      {%- else -%}
-        <span class="hero-logo-text">{{ site.company | default: site.title }}</span>
-      {%- endif -%}
-    </a>
-
     <div class="hero-body">
       <h1 class="hero-title">
-        {{ site.data.sitetext.header.title | default: "Property Finance Made Clear." }}
+        {{ site.data.sitetext.header.title }}
       </h1>
       <p class="hero-subtitle">
-        {{ site.data.sitetext.header.text | default: "Helping homebuyers and property investors secure the right finance solution with confidence." }}
+        {{ site.data.sitetext.header.text }}
       </p>
+      {% if site.data.sitetext.header.description %}
       <p class="hero-description">
-        Apply once, at no cost to you. Let South Africa's leading banks compete for your business.
+        {{ site.data.sitetext.header.description }}
       </p>
+      {% endif %}
       <div class="hero-actions">
         <a href="{{ site.data.sitetext.header.button1_url | default: '#contact' }}" class="btn btn-primary btn-xl">
-          {{ site.data.sitetext.header.button1 | default: "Apply Now" }}
-        </a>
-        <a href="{{ site.data.sitetext.header.button2_url | default: '#contact' }}" class="btn btn-outline-primary btn-xl">
-          {{ site.data.sitetext.header.button2 | default: "Talk To An Advisor" }}
+          {{ site.data.sitetext.header.button1 }}
         </a>
       </div>
 

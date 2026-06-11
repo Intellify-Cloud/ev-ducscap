@@ -1,6 +1,6 @@
 header:
-  title: "Property Finance Made Clear."
-  text: "Helping homebuyers and property investors secure the right finance solution with confidence."
+  title: "Bond & Property Finance. Done Right."
+  text: "Apply once, at no cost to you, and let South Africa's leading banks compete for your business."
   button1: "Apply Now"
   button1_url: "#contact"
   button2: "Talk To An Advisor"
@@ -94,14 +94,21 @@ more-calculators:
 
 textblock:
   title: "Why Duces Capital"
-  text: ""
-  footer: "We specialise in connecting clients with the right property finance solution. Every recommendation is made with your best interests at heart."
+  text: "We specialise in connecting clients with the right property finance solution. Every recommendation is made with your best interests at heart."
   section: textblock
   list:
     - title: "Independent Advice"
+      desc: "Unbiased guidance tailored strictly to your financial objectives and long-term security."
+      icon: "fas fa-balance-scale"
     - title: "Multiple Lender Access"
+      desc: "Access to a broad lender network to help secure competitive property finance options."
+      icon: "fas fa-network-wired"
     - title: "Expert Guidance"
+      desc: "Clear, experienced guidance through each stage of the finance process."
+      icon: "fas fa-brain"
     - title: "Dedicated Support"
+      desc: "Personal support from enquiry through to completion."
+      icon: "fas fa-headset"
 
 portfolio:
   title: "Why Choose Duces Capital"
@@ -133,9 +140,6 @@ clients:
     - title: "Investec"
       url: https://www.investec.co.za/
       logo: assets/img/clients/investec.png
-    - title: "Ithala Bank"
-      url: https://www.ithala.co.za/
-      logo: assets/img/clients/ithala-bank.png
     - title: "Rand Merchant Bank"
       url: https://www.rmb.co.za
       logo: assets/img/clients/rmb-img-n.png
