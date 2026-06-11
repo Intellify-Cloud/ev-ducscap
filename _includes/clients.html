@@ -1,0 +1,19 @@
+<!-- Clients -->
+<section class="clients-section bg-white py-5" id="{{ site.data.sitetext.clients.section | default: "clients" }}">
+  <div class="col-lg-12 text-center">
+    <h2 class="section-heading text-uppercase">{{ site.data.sitetext.clients.title }}</h2>
+  </div>
+  <div class="container">
+    <div class="row d-flex justify-content-around" {% if site.data.sitetext.clients.horizontal-scrolling == "yes" %}
+      id="scrolling-clients" {% endif %}>
+      
+      {% for client in site.data.sitetext.clients.list %}
+      <div class="client-logo col-md-3 col-sm-6">
+        <a href="{{ client.url }}" aria-label="Visit {{ client.title }}">
+          <img class="img-fluid d-block mx-auto align-self-center" src="{{ client.logo | relative_url }}" alt="{{ client.title }}" loading="lazy">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,82 @@
+// Styling for the footer
+.footer {
+  background-color: $white;
+  padding: $space-4 0 30px;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    background: linear-gradient(
+      90deg,
+      rgba($primary, 0),
+      rgba($primary, 0.18) 22%,
+      rgba($primary, 0.68) 50%,
+      rgba($primary, 0.18) 78%,
+      rgba($primary, 0)
+    );
+    content: "";
+    height: 2px;
+    left: 50%;
+    max-width: 760px;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: calc(100% - #{$space-4});
+  }
+
+  span.copyright {
+    font-size: 90%;
+    line-height: 40px;
+    text-transform: none;
+    @include heading-font;
+  }
+  ul.quicklinks {
+    font-size: 90%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+    @include heading-font;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  right: 8px;
+  top: 85%;
+}
+.whatsapp h5 {
+  color: rgb(255, 255, 255);
+  background: #20b20f;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+  li {
+    a {
+      align-items: center;
+      background-color: $primary;
+      border-radius: 50%;
+      box-shadow: none;
+      color: $white;
+      display: inline-flex;
+      font-size: 20px;
+      height: 48px;
+      justify-content: center;
+      line-height: 1;
+      outline: none;
+      transition: background-color $motion-fast, box-shadow $motion-fast, transform $motion-fast;
+      width: 48px;
+
+      &:active,
+      &:focus-visible,
+      &:hover {
+        background-color: $brand-primary-dark;
+        box-shadow: $elevation-1;
+        color: $white;
+        transform: translateY(-1px);
+      }
+    }
+  }
+}

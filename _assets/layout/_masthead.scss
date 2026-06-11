@@ -1,0 +1,127 @@
+// Styling for the masthead
+header.masthead {
+  text-align: center;
+  color: white;
+  background-color: $primary;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+
+  .container {
+    width: 100%;
+  }
+
+  .intro-text {
+    padding-top: $space-6;
+    padding-bottom: $space-5;
+    .intro-lead-in {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: $line-height-heading;
+      margin-bottom: $space-3;
+      font-family: 'Inter', sans-serif;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .intro-heading {
+      font-size: 38px;
+      font-weight: 700;
+      line-height: $line-height-tight;
+      margin-bottom: $space-4;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+    }
+  }
+}
+
+@media (min-width:320px) {
+  header.masthead {
+    min-height: 70vh;
+
+    .intro-text {
+      padding-top: $space-6;
+      padding-bottom: $space-5;
+      .intro-lead-in {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $line-height-heading;
+        margin-bottom: $space-3;
+        font-family: 'Inter', sans-serif;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .intro-heading {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: $line-height-tight;
+        margin-bottom: $space-4;
+        font-family: 'Montserrat', sans-serif;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media(min-width:480px) {
+  header.masthead {
+    .intro-text {
+      padding-top: $space-6;
+      .intro-lead-in {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $line-height-heading;
+        margin-bottom: $space-3;
+        font-family: 'Inter', sans-serif;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .intro-heading {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: $line-height-tight;
+        margin-bottom: $space-4;
+        font-family: 'Montserrat', sans-serif;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media(min-width:768px) {
+  header.masthead {
+    min-height: 70vh;
+
+    .intro-text {
+      padding-top: $space-6;
+      padding-bottom: $space-6;
+      .intro-lead-in {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $line-height-heading;
+        margin-bottom: $space-3;
+        font-family: 'Inter', sans-serif;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .intro-heading {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: $line-height-tight;
+        margin-bottom: $space-4;
+        font-family: 'Montserrat', sans-serif;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// p {
+//   margin-top: 90px;
+//   margin-bottom: 1rem;
+//   line-height: 1.75;
+// }

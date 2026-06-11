@@ -1,0 +1,49 @@
+<!-- Text-Block -->
+<section class="bg-white page-section textblock-section" id="{{ site.data.sitetext.textblock.section | default: "textblock" }}">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase text-left">{{ site.data.sitetext.textblock.title | default: "Text Text-Block" }}</h2>
+        {% if site.data.sitetext.textblock.text %}
+        <h3 class="textblock-subheading text-muted text-center">{{ site.data.sitetext.textblock.text }}</h3>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- Left Block: Text Content -->
+      <div class="col-lg-8 text-left">
+        <div class="container section-subheading">
+          {% for textblock in site.data.sitetext.textblock.list %}
+          <div class="row mb-3">
+            {% if textblock.image %}
+            <div class="textblock-image col-2 p-1 text-center">
+              <i class="fas {{textblock.image}} fa-2x"></i>
+            </div>
+            {% endif %}
+            <div class="textblock-title col align-items-center">
+              {{ textblock.title }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <br>
+        {% if site.data.sitetext.textblock.footer %}
+        <div class="text-left w-100">
+          <strong>{{ site.data.sitetext.textblock.footer | markdownify }}</strong>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Right Block: Image -->
+      <div class="col-lg-4 text-center">
+        
+        <img src="{{ '/assets/SYMBOL.png' | relative_url }}" alt="Duces Capital symbol" class="img-fluid" loading="lazy">
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Text-Block -->

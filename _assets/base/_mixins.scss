@@ -1,0 +1,25 @@
+// Primary Font: Montserrat (Headings, Navigation, Hero, Graphics)
+// Weights: SemiBold (600), Bold (700)
+@mixin serif-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+// Used in navbar-brand (logo)
+@mixin script-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+// Secondary Font: Inter (Paragraphs, Forms, Buttons, Long content)
+// Weights: Regular (400), Medium (500)
+@mixin body-font {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+// Primary Font for headings
+@mixin heading-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}

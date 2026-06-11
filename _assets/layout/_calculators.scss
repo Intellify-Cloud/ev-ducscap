@@ -1,0 +1,67 @@
+// Styling for the calculators section
+.calculators-heading {
+  margin: $space-3 0 $space-2;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: $line-height-heading;
+}
+
+.calculators-section {
+  background-color: $primary;
+
+  .section-heading,
+  .section-subheading {
+    color: $white;
+  }
+
+  .card-deck {
+    gap: $space-3;
+  }
+
+  .card {
+    min-width: 0;
+    border: 0;
+    border-radius: $radius-md;
+    box-shadow: $elevation-1;
+    color: $text-strong;
+    overflow: hidden;
+    transition: box-shadow $motion-standard, transform $motion-standard;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: $elevation-3;
+      transform: translateY(-4px);
+    }
+  }
+
+  .card-body {
+    padding: $space-4 $space-3 $space-3;
+  }
+
+  .card-title {
+    color: $text-strong;
+  }
+
+  .card-footer {
+    border: 0;
+    background: $surface;
+    padding: 0 $space-3 $space-3;
+  }
+
+  .fa-stack {
+    margin-bottom: $space-1;
+  }
+
+  .btn {
+    margin-bottom: 0;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 767px) {
+  .calculators-section {
+    .card {
+      margin-bottom: $space-3;
+    }
+  }
+}
