@@ -222,10 +222,47 @@ contact:
 
 footer:
   copyright_prefix: "Copyright"
-  legal: "Powered by evo Home Loans"
+  description: "Duces Capital helps homebuyers, investors, and property owners secure competitive property finance solutions through expert guidance and access to multiple lenders."
+  sections:
+    - title: "Services"
+      links:
+        - title: "Home Loans"
+          url: "#services"
+        - title: "Bond Origination"
+          url: "#services"
+        - title: "Refinancing"
+          url: "#services"
+        - title: "Property Investment"
+          url: "#services"
+    - title: "Company"
+      links:
+        - title: "About"
+          url: "#about"
+        - title: "Why Duces Capital"
+          url: "#textblock"
+        - title: "Lender Partners"
+          url: "#clients"
+        - title: "Contact"
+          url: "#contact"
+    - title: "Resources"
+      links:
+        - title: "Calculators"
+          url: "#calculators"
+        - title: "Privacy Statement"
+          url: "/privacy-statement"
+        - title: "Data Sharing"
+          url: "/data-sharing-agreement"
+        - title: "Legal"
+          url: "/legal"
+  legal_links:
+    - title: "Privacy Statement"
+      url: "/privacy-statement"
+    - title: "Data Sharing"
+      url: "/data-sharing-agreement"
   privacy: "Privacy Statement"
   data_sharing: "Data Sharing"
   social_label: "Social link"
   social:
     - url: https://www.instagram.com/ducescapital/
       icon: "fab fa-instagram"
+      title: "Instagram"
